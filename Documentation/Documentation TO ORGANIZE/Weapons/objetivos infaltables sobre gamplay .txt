@@ -1,0 +1,51 @@
+los siguientes objetivos deverian de estar para el jueves 26/8 o jueves 2/9 a mas tardar
+
+º priorizar animacion de los enemigos recibiendo daño: si los enemigos estan recibiendo daño no deverian de poder moverce o atacarme 
+º fast phase : el juego se siente lento, poco dinamico , no es frenetico, para esto nesesitamos 
+	º menos durabilidad de las armas no mas de un combo o un especial attck
+	º DROP DE ARMAS los enemigos al morir deven dropear las armas 
+	ª enemigos dumy con cantidades de vida diferente atravez de un random:
+		ya sea por q tiene para elegir entre tres valores fijos o por 
+		q elige un numero de 0 a x cantidad
+º al atacar no deveria de poder moverme: este penalti es para obligar a dashear al jugador con mas frecuencia 
+º las animaciones deverian disparar particulas mas finamente: el player deveria tener una funcion q llame a las particulas correspondientes segun la etapa de la animacion
+º puertas por salas : no deveria de poder pasarme el juego sin matar enemigos, colocando puertas q se cierran hasta matar a todos los enemigos deveria solucionarce
+
+videos referencia  MIRARLOS EN = 0.25 DE VELOCIDAD Y OVSERVAR VARIAS VECES LA MISMA TOMA / MISMO ATAQUE 
+
+REFERENCIA DE FAST PHASE 
+https://www.youtube.com/watch?v=6fd6lpxBUq4&t=668s apartir de minuto 1:51
+ notese como el jugador arroja la lanza y al instante dashea hacia ella para recojerla
+se observa q los ataques basicos tienen un efecto de particulas destellantes negros con un vorde destellante
+en degrade rojo amarillo 
+en el instante previo a arrojar la lanza se ve un feedback de hacia a donde apunta
+
+REFERENCIA ESPECIALATTCK LANZA
+https://www.youtube.com/watch?v=lfwisVGOy98  minuto 19:06 al 19:13
+ comienza la animacion y vemos un humo negro en el suelo q se acerca hacia el pj luego a medida q avanza aparece un segundo 
+humo rosa/rojo muy sutil q envuelve al personaje para este punto el modelo de la lanza desaparecio y en su lugar vemos al 
+modelo del player realizar 7 estocadas y vemos un fantasma del mismo q lo acompaña realizando estocadas en otras direcciones a
+ su vez en el instante q desaparece el modelo de la lanza y se apaga el humo rosa vemos salir de la mano del player una lanza 
+hecha en vfxs seguido de la activacion de un sistema de particulas q hacen aparecer varias instancias de esa lanza hecha en vfxs 
+la habilidad parece realizar 6 o 7 ticks de daño uno cada vez q el player se encuentra en el punto mas extremo de la estocada 
+
+REFERENCIA DE PARTICULAS ATTCK BASICO
+https://www.youtube.com/watch?v=kfvT1UQoSNM minuto 4:50 al 4:54
+cada q el jugador hace click se acciona la animacion interrumpiendo la animacion de recibir daño y se activa un trail con 
+varias etapas de noise para darle ese efecto a relampago al impactar el segundo attck bacico se dispara una serie
+ de particulas a modo de explosion on hit conformadas por un circulo un destello en x grande u unas pqueñisimas particulas 
+q continuan existiendo al finalizar el combo tamb vemos una especie de slash y una particula luminosa q acompaña el filo 
+esta se encuentra tacheada al modelo de la lanza dado q al rotar el personaje esta mantiene su pocicion respecto de la lanza
+en si pero continua alejandoce por ultimo al matar el ultimo enemigo vemos un efecto de enfacis en toda la screen 
+a medida q se ejecuta un camera shake y aparece el texto en el centro de la pantalla recuperando su forma de una deformacion
+
+REFERENCIA ESPECIALATTCK LANZA 02
+https://www.youtube.com/watch?v=jjFZ2pF-LoM minuto 1:36 al 1:40 y 1:45 al 1:56
+ obcevamos varias similitudes con los arq la lanza y el escudo decaparecen en el momento de anticipacion 
+tamb vemos un fantasma del personaje q ejecuta una animacion parecida junto con una serie de particulas q se 
+desplazan hacia adelante en este caso se nota mas la exageracion de las animaciones deformando el escudo y la
+lanza en momentos necesarios agregando enfacis a los golpes
+
+REFERENCIA ESPECIALATTCK PUÑO (no es el q lleva siempre)
+https://www.youtube.com/watch?v=bsSMN6C3pLc minuto 12:17 al 12:25 mas exacto la patada final q deja el suelo roto 
+ 

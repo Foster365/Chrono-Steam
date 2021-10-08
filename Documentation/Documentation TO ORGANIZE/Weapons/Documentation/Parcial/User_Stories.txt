@@ -1,0 +1,38 @@
+Arte
+
++ Como usuario, quiero una amplia variedad de armas, para tener mayor jugabilidad y variedad de juego.
++ Como usuario, quiero un sistema de mercado, para adquirir upgrades para
+mi personaje/armamento del mismo.
++ Como usuario, quiero un juego con temática steampunk y gótica, para tener una experiencia acorde a mis gustos.
++ Como usuario, quiero una interfaz de UI clara, para tener mayor comodidad y legibilidad al momento de informarme acerca del
+estado del jugador o el gameplay en sí.
++ Como jugador, quiero una variedad de efectos de sonido y música acordes al juego, para tener una experiencia sonora más inmersiva.
+
+Game Design
+
++ Como usuario, quiero una amplia variedad de armas, para tener mayor jugabilidad y variedad de juego.
++ Como usuario, quiero un sistema de mercado, para adquirir upgrades para
+mi personaje/armamento del mismo.
++ Como usuario, quiero un minimapa del nivel actual, para tener una referencia del
+punto en el cual me estoy situando en determinado momento, y para tener una
+referencia del environment del nivel.
++ Como usuario, quiero un sistema de niveles aleatorios, para evitar tener una experiencia de juego repetitiva.
++ Como usuario, quiero variedad de habilidades, desbloqueables, a lo largo del juego, para tener una experiencia más enriquecedora y
+entretenida del juego, sintiendo una progresión.
++ Como jugador, quiero un sistema de muerte permanente, para otorgarle más adrenalina al juego, colaborando así con el flow del juego.
+
+Programación
+
++ Como usuario, quiero un sistema de mercado, para adquirir upgrades para
+mi personaje/armamento del mismo.
++ Como usuario, quiero un sistema de pelea dinámico y inmersivo, para tener una experiencia de juego más
+disfrutable.
++ Como usuario, quiero una amplia variedad, diferenciable, de enemigos, para tener una experiencia de juego más entretenida.
++ Como usuario, quiero una interfaz que me informe los stats del jugador, para tener un resumen
+de los elementos de juego.
+
+
+
+
+
+
