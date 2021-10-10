@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8409194900526776222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8409194900526776192}
+  - component: {fileID: 8409194900526776223}
+  m_Layer: 0
+  m_Name: RoomTamplates
+  m_TagString: RoomTamplates
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8409194900526776192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409194900526776222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8409194900526776223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409194900526776222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde0c57a21a977f47bad25d3660ef41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topDoorRooms:
+  - {fileID: 7414717990866724720, guid: 58a708ea8cc6c3740875535e8c3b20be, type: 3}
+  - {fileID: 7672509294110310846, guid: af7e124e68ea22e499b8b942f4b0f00e, type: 3}
+  - {fileID: 6999294546463266475, guid: af0f3d252aaed6c43acecf6478b4eef9, type: 3}
+  rightDoorRooms:
+  - {fileID: 6999294546463266475, guid: af0f3d252aaed6c43acecf6478b4eef9, type: 3}
+  - {fileID: 7914984425148938197, guid: 8a495d68c13f9784d8e3321c1fa2e272, type: 3}
+  - {fileID: 2630434964680627285, guid: 09bf0e5f0748e0b4da99e5f2fdf7b4c3, type: 3}
+  - {fileID: 7672585446061506722, guid: 2e1182ae47b8e524fa22580e28853ad2, type: 3}
+  botomDoorRooms:
+  - {fileID: 7672509294110310846, guid: af7e124e68ea22e499b8b942f4b0f00e, type: 3}
+  - {fileID: 5357232705073386541, guid: 5b665a3fdab1d064784e56fd4e583f53, type: 3}
+  - {fileID: 7672585446061506722, guid: 2e1182ae47b8e524fa22580e28853ad2, type: 3}
+  - {fileID: 979186891872690325, guid: 227512fc02d02cc4eb656ae9f1035cf2, type: 3}
+  lefthDoorRooms:
+  - {fileID: 2630434964680627285, guid: 09bf0e5f0748e0b4da99e5f2fdf7b4c3, type: 3}
+  - {fileID: 5357232705073386541, guid: 5b665a3fdab1d064784e56fd4e583f53, type: 3}
+  - {fileID: 5581257917363711449, guid: d4f572a2e05e1ad4591f76d98983fc7e, type: 3}
+  closeDoorRooms:
+  - {fileID: 2087243296212987815, guid: c6fcc0e88f8bbc94096287fdd8b87cc7, type: 3}
+  - {fileID: 2087243296212987815, guid: c6fcc0e88f8bbc94096287fdd8b87cc7, type: 3}
+  spawnedRooms: []
+  waitTime: 1
+  boss: {fileID: 5668013031337585359, guid: eb56d59b95a9b264192bdbf2b183a746, type: 3}

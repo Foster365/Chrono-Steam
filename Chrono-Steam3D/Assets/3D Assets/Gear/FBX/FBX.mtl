@@ -1,0 +1,10 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Appearance
+Kd 0.345098 0.345098 0.345098
+map_Kd -clamp on E:\00_WORK\CGTrader\Luka\Gearbox\Gear 1\FBX\photos_2015_09_18_fst_474o7b33h5s.jpg
+Ks 0.5 0.5 0.5
+illum 2

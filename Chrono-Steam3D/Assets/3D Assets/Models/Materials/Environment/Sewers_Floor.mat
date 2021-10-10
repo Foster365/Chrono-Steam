@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sewers_Floor
+  m_Shader: {fileID: 4800000, guid: d848d9ff483650e408f9c6e996792094, type: 3}
+  m_ShaderKeywords: _NORMALMAP
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 059ee2eb29d125c43894533b01b7da96, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaFloorTexture:
+        m_Texture: {fileID: 2800000, guid: e55f75852a3d3994fa7ae36510f2a839, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 60cd564504607f244b33040f55a2289f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FloorTexture:
+        m_Texture: {fileID: 2800000, guid: e55f75852a3d3994fa7ae36510f2a839, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Flowmap:
+        m_Texture: {fileID: 2800000, guid: be60e3b9eac9c4049ac715d15c64f090, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Flowmap1:
+        m_Texture: {fileID: 2800000, guid: be60e3b9eac9c4049ac715d15c64f090, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 059ee2eb29d125c43894533b01b7da96, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 10910, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 60cd564504607f244b33040f55a2289f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: e55f75852a3d3994fa7ae36510f2a839, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopTexture0:
+        m_Texture: {fileID: 2800000, guid: 059ee2eb29d125c43894533b01b7da96, type: 3}
+        m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _TopTexture1:
+        m_Texture: {fileID: 2800000, guid: 60cd564504607f244b33040f55a2289f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha_Offset_Y: 2
+    - _Alpha_Tiling_X: 2
+    - _Alpha_Tiling_Y: 2
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DepthDistance: 3.61
+    - _DepthDistance1: 2.04
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _DynamicFoamRange: 0.658
+    - _DynamicFoamRange1: 0.358
+    - _EdgeLength: 15
+    - _Float0: 1
+    - _Float1: 1
+    - _Float2: 1
+    - _Float3: 1
+    - _FlormapIntensity: 0.79
+    - _FlormapIntensity1: 0.453
+    - _FlowmapTiling: 4.46
+    - _FlowmapTiling1: 4.86
+    - _FoamRange: 0.662
+    - _FoamRange1: 0.25
+    - _FoamSpeedX: 0.01
+    - _FoamSpeedX1: 1.39
+    - _FoamSpeedY: 0.01
+    - _FoamSpeedY1: 1.75
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _NoiseScale: 1.2
+    - _NoiseScale1: 1.21
+    - _NoiseTiling: 2.64
+    - _NoiseTiling1: 1.24
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Texture_Offset_X: 2
+    - _Texture_Offset_Y: 2
+    - _Texture_Tiling_X: 2
+    - _Texture_Tiling_Y: 2
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Albedo_Tiling: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FloorColor: {r: 0.26415092, g: 0.18217304, b: 0.09843359, a: 1}
+    - _FoamColor: {r: 0.14667143, g: 0.3018868, b: 0.1971659, a: 0}
+    - _FoamColor1: {r: 0.24875402, g: 0.5197491, b: 0.8113208, a: 0}
+    - _Texture_Color: {r: 0.2426357, g: 0.3490566, b: 0.2387415, a: 0}
+    - _WaterColor: {r: 0.35751158, g: 0.735849, b: 0.6738152, a: 0}
+    - _WaterColor1: {r: 0.20478818, g: 0.2721528, b: 0.735849, a: 0}
