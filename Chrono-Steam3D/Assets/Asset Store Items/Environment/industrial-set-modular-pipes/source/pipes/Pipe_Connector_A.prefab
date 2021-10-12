@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 251024482396151849}
   - component: {fileID: 4599028467523510521}
   - component: {fileID: 247697372709450998}
+  - component: {fileID: 7963968398748832248}
   m_Layer: 0
   m_Name: Pipe_Connector_A
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7963968398748832248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796362559959993032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 701352392349305620, guid: f12a7cfa5e8ca764a9670aa21478ecba, type: 3}

@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 6030480999168034313}
   - component: {fileID: 300954083368627722}
   - component: {fileID: 7174665407559736498}
+  - component: {fileID: 7155174733163499809}
   m_Layer: 0
   m_Name: CableHoles.001
   m_TagString: Untagged
@@ -171,6 +172,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7155174733163499809
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200237799668100937}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -777358782174977728, guid: f0b435453cf230341a1479331064d658, type: 3}
 --- !u!1 &4788254113820263435
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +229,7 @@ GameObject:
   - component: {fileID: 7297301509842412508}
   - component: {fileID: 5974837007771970681}
   - component: {fileID: 8434703151668123827}
+  - component: {fileID: 7620243371121685600}
   m_Layer: 0
   m_Name: Steampunk_Body_Storage_Container
   m_TagString: Untagged
@@ -284,6 +300,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7620243371121685600
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7930532883954170214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -613200878065603006, guid: f0b435453cf230341a1479331064d658, type: 3}
 --- !u!1 &8790741464232261804
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +325,7 @@ GameObject:
   - component: {fileID: 3170068249765310154}
   - component: {fileID: 5481477035187914221}
   - component: {fileID: 3504330488610150494}
+  - component: {fileID: 8752004883363003880}
   m_Layer: 0
   m_Name: CableHoles.002
   m_TagString: Untagged
@@ -363,3 +394,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8752004883363003880
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790741464232261804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5563876736083023878, guid: f0b435453cf230341a1479331064d658, type: 3}

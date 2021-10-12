@@ -34,11 +34,11 @@ TagManager:
   - 
   - 
   - Player
-  - wall
+  - Wall
   - Enemy
   - Weapon
-  - EnemyBullete
-  - 
+  - Enemy_Bullet
+  - Light_Pillar
   - 
   - 
   - 

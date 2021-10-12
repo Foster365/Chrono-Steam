@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7974865409478151121}
   - component: {fileID: 1359795250296204945}
   - component: {fileID: 2207557663888219090}
+  - component: {fileID: 8749035939785273439}
   m_Layer: 0
   m_Name: pillier_2.001
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8749035939785273439
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110980828807981048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3220879692575971585, guid: e75aa36d2012dd94dbd4fb3f505ca198, type: 3}
 --- !u!1 &6290513483531182797
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8739866033486457551}
   m_Layer: 0
-  m_Name: Steampunk_Pillar 1
+  m_Name: Steampunk_Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
