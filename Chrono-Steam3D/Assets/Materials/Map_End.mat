@@ -24,16 +24,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DepthDistance: 1.44
-    - _DynamicFoamRange: 0.578
-    - _FlormapIntensity: 0.451
-    - _FlowmapTiling: 1.24
-    - _FoamRange: 0.189
-    - _FoamSpeedX: 0.21
-    - _FoamSpeedY: 0.27
-    - _NoiseScale: 0.38
-    - _NoiseTiling: 0.82
+    - _DepthDistance: 5
+    - _DynamicFoamRange: 0.3
+    - _FlormapIntensity: 0.93
+    - _FlowmapTiling: 1
+    - _FoamRange: 0.5
+    - _FoamSpeedX: 0.3
+    - _FoamSpeedY: 0.3
+    - _NoiseScale: 0.5
+    - _NoiseTiling: 0.5
     - __dirty: 0
     m_Colors:
-    - _FoamColor: {r: 0.04846031, g: 0.103773594, b: 0.0954766, a: 0}
+    - _FoamColor: {r: 0.013883946, g: 0.0754717, b: 0.06667345, a: 0}
     - _WaterColor: {r: 0.0269669, g: 0.05660379, b: 0.0269669, a: 0}
