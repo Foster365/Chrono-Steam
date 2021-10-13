@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13307938, g: 0.11150231, b: 0.089711405, a: 1}
+  m_IndirectSpecularColor: {r: 0.13334814, g: 0.1117179, b: 0.08984094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1860,7 +1860,7 @@ PrefabInstance:
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
@@ -2085,7 +2085,7 @@ PrefabInstance:
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
@@ -2169,7 +2169,7 @@ PrefabInstance:
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7506805925514181626, guid: 317da9ff94182db47bdf0d8e1a042281,
         type: 3}
@@ -7033,6 +7033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512159528917932506, guid: 29f5168f349c615419e568b6407d38fe,
+        type: 3}
+      propertyPath: NextLVL
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1512159528917932507, guid: 29f5168f349c615419e568b6407d38fe,
         type: 3}
@@ -36075,21 +36080,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5032010993160448778, guid: e959c5eca1d361048b59776dc206c89e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5032010993160448778, guid: e959c5eca1d361048b59776dc206c89e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5032010993160448778, guid: e959c5eca1d361048b59776dc206c89e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5095427332762194211, guid: e959c5eca1d361048b59776dc206c89e,
         type: 3}

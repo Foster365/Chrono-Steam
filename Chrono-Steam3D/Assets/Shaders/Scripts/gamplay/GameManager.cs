@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private GameObject _playerInstance;
     private GameObject _camera;
     private GameObject lvlManager;
+    private int _lvlToCharge;
+    private int _clearRooms;
     [SerializeField]
     private float respawnCD;
     private Transform playerSpawner;
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
     public GameObject PlayerInstance { get => _playerInstance; set => _playerInstance = value; }
     public GameObject Camera { get => _camera; set => _camera = value; }
     public bool Win { get => _win; set => _win = value; }
+    public int LvlToCharge { get => _lvlToCharge; set => _lvlToCharge = value; }
+    public int ClearRooms { get => _clearRooms; set => _clearRooms = value; }
 
     private void Awake()
     {
@@ -82,7 +86,7 @@ public class GameManager : MonoBehaviour
     public void GameWin()
     {
         Debug.Log("winer winer chiken to diner");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(_lvlToCharge);
     }
     public void GameOver() 
     {
@@ -103,11 +107,12 @@ public class GameManager : MonoBehaviour
         else
             Invoke("reloadScene", respawnCD);
     }
-    private void reloadScene()
+    public void reloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         PlayerInstance.GetComponent<Player_Controler>().Animations.Revive();
-        PlayerInstance.GetComponent<Player_Controler>().Life_Controller.GetHeal(float.MaxValue);
         PlayerInstance.GetComponent<Player_Controler>().Life_Controller.isDead = false;
+        if(SceneManager.GetActiveScene().name == "Tutorial LvL 1")
+        PlayerInstance.GetComponent<Player_Controler>().Life_Controller.GetHeal(float.MaxValue);
     }
 }

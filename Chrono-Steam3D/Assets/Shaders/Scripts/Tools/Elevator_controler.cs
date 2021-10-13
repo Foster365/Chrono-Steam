@@ -32,7 +32,7 @@ public class Elevator_controler : MonoBehaviour
     //se llama desde el animator
     void loadWinLevelEvent()
     {
-        UnityEvent @event = GameManager.Instance.LvlManager.GetComponent<LevelManager>().Winlvl;
+        UnityEvent @event = GameManager.Instance.LvlManager.GetComponent<LevelManager>().WinRoom;
         GameManager.Instance.EventQueue.Add(@event);
     }
 
