@@ -25,16 +25,20 @@ public class OpacityTimer : MonoBehaviour
     {
         if (_currentTime <= 0)
         {
-            foreach (var item in _images)
+            if (_images.Length !=0)
             {
-                if(item.color.a < 255)
+                foreach (var item in _images)
                 {
-                    item.color += new Color (0,0,0, 0.1f);
+                    if (item.color.a < 255)
+                    {
+                        item.color += new Color(0, 0, 0, 0.1f);
+                    }
+                    else
+                        return;
                 }
-                else
-                    return;
-            }
 
+            }
+            if(_texts.Length !=0)
             foreach (var item in _texts)
             {
                 if (item.color.a < 255)
@@ -44,8 +48,10 @@ public class OpacityTimer : MonoBehaviour
                 else
                     return;
             }
-        }else
+        }
+        else
         {
+            if (_images.Length != 0)
             foreach (var item in _images)
             {
                 if (item.color.a > 0)
@@ -56,6 +62,7 @@ public class OpacityTimer : MonoBehaviour
                     return;
             }
 
+            if (_texts.Length != 0)
             foreach (var item in _texts)
             {
                 if (item.color.a > 0)
