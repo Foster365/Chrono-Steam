@@ -100,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.300003
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
@@ -131,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Crack fist
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095802519010381563, guid: 58348b5ccfd7162479262c675f6f4967,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58348b5ccfd7162479262c675f6f4967, type: 3}
@@ -242,6 +247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_Crack fist (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8095802519010381563, guid: 58348b5ccfd7162479262c675f6f4967,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58348b5ccfd7162479262c675f6f4967, type: 3}
 --- !u!4 &4362874440605855168 stripped
@@ -315,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
@@ -325,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.700005
+      value: 71.2
       objectReference: {fileID: 0}
     - target: {fileID: 8095802519010381562, guid: 58348b5ccfd7162479262c675f6f4967,
         type: 3}
@@ -361,6 +371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Crack fist (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095802519010381563, guid: 58348b5ccfd7162479262c675f6f4967,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58348b5ccfd7162479262c675f6f4967, type: 3}
@@ -471,6 +486,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ground_Crack fist (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095802519010381563, guid: 58348b5ccfd7162479262c675f6f4967,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58348b5ccfd7162479262c675f6f4967, type: 3}

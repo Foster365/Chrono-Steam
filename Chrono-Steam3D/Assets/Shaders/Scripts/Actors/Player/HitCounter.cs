@@ -8,7 +8,8 @@ public class HitCounter : MonoBehaviour
 {
    // private TextMeshPro textMeshPro;
     //private CanvasRenderer canvasRenderer;
-    [SerializeField] private Text myText;
+    [SerializeField] private Text hitScoreText;
+    [SerializeField] private Text hitText;
     [SerializeField] private GameObject player;
     
     private int hitCount;
@@ -22,7 +23,7 @@ public class HitCounter : MonoBehaviour
     {
        // textMeshPro = GetComponent<TextMeshPro>();
         //meshRenderer = GetComponent<MeshRenderer>();
-        myText = GetComponent<Text>();
+        hitScoreText = GetComponent<Text>();
         HideHitCounter();
     }
 
@@ -56,31 +57,35 @@ public class HitCounter : MonoBehaviour
     {
         /*textMeshPro.SetText(HitCount.ToString());
         meshRenderer.enabled = true;*/
-        myText.enabled = true;
-        myText.text = hitCount.ToString();
+        hitScoreText.enabled = true;
+        hitText.enabled = true;
+
+        hitScoreText.text = hitCount.ToString();
 
         Color textColor = Color.white;
 
         if (HitCount >= 10) textColor = Color.blue;
-        if (HitCount >= 20) textColor = Color.green;
-        if (HitCount >= 30) textColor = Color.yellow;
-        if (HitCount >= 40) textColor = Color.red;
-        if (HitCount >= 50) textColor = Color.magenta;
+        else if (HitCount >= 20) textColor = Color.green;
+        else if (HitCount >= 30) textColor = Color.yellow;
+        else if (HitCount >= 40) textColor = Color.red;
+        else if (HitCount >= 50) textColor = Color.magenta;
 
         //textMeshPro.color = textColor;
-        myText.color = textColor;
+        hitScoreText.color = textColor;
+        hitText.color = textColor;
         float fontSize = 50f;
         float perHitFontSize = 1f;
 
         if (HitCount >= 50f)
         {
             //textMeshPro.fontSize = 2f;
-            myText.fontSize = 100;
+            hitScoreText.fontSize = 100;
+            hitText.fontSize = 100;
         }
         else
         {
             //textMeshPro.fontSize = fontSize + perHitFontSize * HitCount;
-            myText.fontSize = ((int)fontSize) + ((int)perHitFontSize) * HitCount;
+            hitScoreText.fontSize = ((int)fontSize) + ((int)perHitFontSize) * HitCount;
         }
         
     }
@@ -97,6 +102,7 @@ public class HitCounter : MonoBehaviour
     {
         // meshRenderer.enabled = false;
         HitCount = 0;
-        myText.enabled = false;
+        hitScoreText.enabled = false;
+        hitText.enabled = false;
     }
 }
