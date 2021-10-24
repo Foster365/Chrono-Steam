@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attDamage: 16
   durability: 100
-  duravilitiDecres: 20
+  duravilitiDecres: 8
   coolDown: 1
   _EspExeCd: 3
   _espDamage: 20

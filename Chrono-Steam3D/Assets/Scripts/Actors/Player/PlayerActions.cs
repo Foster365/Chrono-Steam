@@ -39,6 +39,7 @@ public class PlayerActions : MonoBehaviour,IComand
             {
                 _comboCounter += 1;
                 _player.IsAttacking = true;
+                Debug.Log(_comboCounter);
                 if (_player.PlayerStats.Weapon.GetComponent<Weapon>().CurrentCD <= 0)
                 {
                     if (_comboCounter!=0)
