@@ -41,6 +41,7 @@ public class BossAI : MonoBehaviour
         combat = gameObject.GetComponent<EnemyCombat>();
         RouletteWheel();
         CreateDecisionTree();
+        GameManager.Instance.LvlManager.GetComponent<LevelManager>().BossInstance = enemy;
     }
 
     private void Update()

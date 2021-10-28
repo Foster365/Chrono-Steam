@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     private UnityEvent _winlvl;
     private UnityEvent _winRoom;
     private UnityEvent _bossDying;
+    private Enemy _bossInstance;
     [SerializeField]
     private GameObject _elevatorDoor;
     [SerializeField]
@@ -24,6 +25,7 @@ public class LevelManager : MonoBehaviour
     public UnityEvent WinRoom => _winRoom;
 
     public GameObject ElevatorDoor { get => _elevatorDoor; set => _elevatorDoor = value; }
+    public Enemy BossInstance { get => _bossInstance; set => _bossInstance = value; }
 
     private void Awake()
     {

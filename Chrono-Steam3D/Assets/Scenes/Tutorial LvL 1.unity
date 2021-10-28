@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13307938, g: 0.11150231, b: 0.089711405, a: 1}
+  m_IndirectSpecularColor: {r: 0.13334814, g: 0.1117179, b: 0.08984094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1615,7 +1615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &71475934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1766,7 +1766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &267925565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1977,7 +1977,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &545860986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2535,6 +2535,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -36.80005
       objectReference: {fileID: 0}
+    - target: {fileID: 5533417987556562716, guid: a46e2dc5aee6c9e4aaa9959c9344d9f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6232072017319497538, guid: a46e2dc5aee6c9e4aaa9959c9344d9f6,
         type: 3}
       propertyPath: bossEnemy
@@ -2554,6 +2559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -8.13001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310905361989568915, guid: a46e2dc5aee6c9e4aaa9959c9344d9f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7862818852015177456, guid: a46e2dc5aee6c9e4aaa9959c9344d9f6,
         type: 3}

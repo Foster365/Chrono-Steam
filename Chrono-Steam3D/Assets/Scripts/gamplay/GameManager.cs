@@ -92,7 +92,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("YOU DIE...");
         _gameOver = true;
-        if (SceneManager.GetActiveScene().name == "Tutorial LvL")
+        if (SceneManager.GetActiveScene().name != "Tutorial LvL 1")
+        {
+            Invoke("reloadScene", respawnCD);
+        }
+        else
         {
             if (playerSpawner == null)
             {
@@ -103,9 +107,8 @@ public class GameManager : MonoBehaviour
             PlayerInstance.GetComponent<Player_Controler>().Animations.Revive();
             PlayerInstance.GetComponent<Player_Controler>().Life_Controller.GetHeal(float.MaxValue);
             PlayerInstance.GetComponent<Player_Controler>().Life_Controller.isDead = false;
+            return;
         }
-        else
-            Invoke("reloadScene", respawnCD);
     }
     public void reloadScene()
     {

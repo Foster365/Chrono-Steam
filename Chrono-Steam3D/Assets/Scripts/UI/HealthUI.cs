@@ -26,7 +26,7 @@ public class HealthUI : MonoBehaviour
 
     private void Start()
     {
-        
+        bossEnemy = GameManager.Instance.LvlManager.GetComponent<LevelManager>().BossInstance;
        // bossHealthUI = GameObject.FindWithTag(UtilitiesTags.BOSS_HEALTH_UI_TAG).GetComponent<Image>();
     }
    
