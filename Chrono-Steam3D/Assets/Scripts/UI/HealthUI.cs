@@ -7,8 +7,16 @@ public class HealthUI : MonoBehaviour
 {
     [SerializeField]
     private Image pjHealthUI;
-    private float playerLife;
-    private float maxLife;
+    private float playerHealth;
+    private float playerMaxHealth;
+
+    //Boss Enemy
+
+    [SerializeField] Image bossHealthUI;
+    float bossHealth;
+    float bossMaxHealth;
+
+    [SerializeField] Enemy bossEnemy;
     //public Image bossHealthUI;
 
     private void Start()
@@ -19,18 +27,26 @@ public class HealthUI : MonoBehaviour
    
     private void Update()
     {
-        playerLife = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().Life_Controller.CurrentLife;
-        maxLife = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().PlayerStats.MaxLife;
-        DisplayPlayerHealth(playerLife);
+        //Player Health
+        playerHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().Life_Controller.CurrentLife;
+        playerMaxHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().PlayerStats.MaxLife;
+
+        //Boss Health
+
+        bossHealth = bossEnemy.GetComponent<Enemy>().Stats.MaxHealth;
+        bossMaxHealth = bossEnemy.GetComponent<Enemy>().Life_Controller.CurrentLife;
+
+        DisplayHealth(pjHealthUI, playerHealth, playerMaxHealth);
+        DisplayHealth(bossHealthUI, bossHealth, bossMaxHealth);
     }
 
-    public void DisplayPlayerHealth(float value)
+    public void DisplayHealth(Image healthUI, float value, float maxValue)
     {
         
         if(value<0f)
             value=0f;
 
-        pjHealthUI.fillAmount = value/ maxLife;
+        healthUI.fillAmount = value/ maxValue;
     }
 
     //public void DisplayBossHealth(float value)

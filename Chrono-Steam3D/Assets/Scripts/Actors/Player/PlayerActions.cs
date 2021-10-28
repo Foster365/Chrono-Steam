@@ -224,6 +224,7 @@ public class PlayerActions : MonoBehaviour,IComand
         {
             if (_player.PlayerStats.Weapon != null)
             {
+                _player.IsWeaponSlotNull = true;
                 FindObjectOfType<AudioManager>().Play("BrokenWeapon");
                 _player.PlayerStats.Weapon.GetComponent<Weapon>().TurnOffWeaponFresnel();
                 Debug.Log("Se desprendió la weapon");
