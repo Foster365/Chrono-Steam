@@ -185,37 +185,39 @@ public class PlayerActions : MonoBehaviour,IComand
         {
             if (_player.PlayerStats.Weapon != null)
             {
-                _player.IsAttacking = true;
-                if (_player.PlayerStats.Weapon.CompareTag("Blade"))
+                if (_player.PlayerStats.Weapon.GetComponent<Weapon>().CurrentEspExeCd >= _player.PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.EspExeCd)
                 {
-                    _player.Animations.SpecialAttackAnimation();
-                }
-                if (_player.PlayerStats.Weapon.CompareTag("Claimore"))
-                {
-                    _player.Animations.SpecialClaymoreAttackAnimation();
-                }
-                if (_player.PlayerStats.Weapon.CompareTag("Gun"))
-                {
-                    if (_gunUIarea.gameObject.activeSelf && _gunUIdistance.gameObject.activeSelf)
+                    _player.IsAttacking = true;
+                    if (_player.PlayerStats.Weapon.CompareTag("Blade"))
                     {
-                        _player.WeaponSpecialExecute();
-                        _gunUIarea.transform.position = _canvasCenter.position;
-                        _gunUIarea.gameObject.SetActive(false);
-                        _gunUIdistance.gameObject.SetActive(false);
+                        _player.Animations.SpecialAttackAnimation();
+                    }
+                    if (_player.PlayerStats.Weapon.CompareTag("Claimore"))
+                    {
+                        _player.Animations.SpecialClaymoreAttackAnimation();
+                    }
+                    if (_player.PlayerStats.Weapon.CompareTag("Gun"))
+                    {
+                        if (_gunUIarea.gameObject.activeSelf && _gunUIdistance.gameObject.activeSelf)
+                        {
+                            _player.WeaponSpecialExecute();
+                            _gunUIarea.transform.position = _canvasCenter.position;
+                            _gunUIarea.gameObject.SetActive(false);
+                            _gunUIdistance.gameObject.SetActive(false);
+                        }
+                    }
+                    if (_player.PlayerStats.Weapon.CompareTag("Fist"))
+                    {
+                        _player.Animations.SpecialFistAttackAnimation();
+                        FindObjectOfType<AudioManager>().Play("Gun_Weapon_Ultimate_A");
+                        FindObjectOfType<AudioManager>().Play("Gun_Weapon_Ultimate_B");
+                    }
+                    if (_player.PlayerStats.Weapon.CompareTag("Spear"))
+                    {
+                        _player.Animations.SpecialSpearAttackAnimation();
                     }
                 }
-                if (_player.PlayerStats.Weapon.CompareTag("Fist"))
-                {
-                    _player.Animations.SpecialFistAttackAnimation();
-                    FindObjectOfType<AudioManager>().Play("Gun_Weapon_Ultimate_A");
-                    FindObjectOfType<AudioManager>().Play("Gun_Weapon_Ultimate_B");
-                }
-                if (_player.PlayerStats.Weapon.CompareTag("Spear"))
-                {
-                    _player.Animations.SpecialSpearAttackAnimation();
-                }
-
-
+                
                 // _player.WeaponSpecialExecute();
             }
         }

@@ -16,6 +16,7 @@ public class BladeWeapon : Weapon , IAreaAttack
     {
         hitCounter = GameObject.FindGameObjectWithTag("hitCounter").GetComponent<HitCounter>();
         _currentCD = 0;
+        _currentEspExeCd = WeaponStats.EspExeCd;
         _currentDurability = _weaponStats.Durability;
         _player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -43,24 +44,6 @@ public class BladeWeapon : Weapon , IAreaAttack
                 espParticleSystems[i].Play();
             }
 
-            Collider[] Enemys = Physics.OverlapCapsule(_player.transform.position, _player.transform.position + _player.transform.forward * _espAreaStats.MaxDistance, _espAreaStats.MaxAmplitude);
-            for (int i = Enemys.Length - 1; i >= 0; i--)
-            {
-                if (Enemys[i].gameObject != null)
-                {
-                    if (Enemys[i].gameObject.CompareTag("Enemy"))
-                    {
-                        if (hitCounter != null && !Enemys[i].gameObject.GetComponent<Enemy>().Life_Controller.isDead)
-                        {
-                            hitCounter.AddHitCounter();
-                            FindObjectOfType<AudioManager>().Play("PlayerSwordHit");
-                        }
-
-                        Enemys[i].gameObject.GetComponent<Enemy>().Life_Controller.GetDamage(_weaponStats.EspDamage);
-
-                    }
-                }
-            }
             if (specialOjcVfx != null)
             {
                 if (specialOjcVfx.CompareTag("Bullet"))
@@ -73,6 +56,7 @@ public class BladeWeapon : Weapon , IAreaAttack
 
             else
                 Debug.Log("objVFX = NULL");
+            _currentEspExeCd = 0;
         }
     }
 

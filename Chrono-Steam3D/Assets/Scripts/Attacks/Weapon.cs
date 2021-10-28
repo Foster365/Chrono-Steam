@@ -61,6 +61,7 @@ public class Weapon : MonoBehaviour, IComand
     public virtual void Start()
     {
         _currentCD = 0;
+        _currentEspExeCd = WeaponStats.EspExeCd;
         _currentDurability = _weaponStats.Durability;
        /* _rb = this.gameObject.GetComponent<Rigidbody>();
         if (_rb = null)

@@ -80,19 +80,16 @@ public class RangeWeapon : Weapon
         if (_currentDurability > 0)
         {
             _currentDurability -= WeaponStats.DuravilitiDecres;
-            if (_currentEspExeCd >= WeaponStats.EspExeCd)
+            
+            for (int i = 0; i < espParticleSystems.Count; i++)
             {
-                //Debug.Log("EspExecuteAfterCd");
-
-                for (int i = 0; i < espParticleSystems.Count; i++)
-                {
-                    espParticleSystems[i].Play();
-                }
-
-                nRange.GetComponent<SphereDamageArea>().Create(WeaponStats.EspDamage, _player.GetComponent<PlayerActions>().GunUIarea.transform.position);
-                _player.GetComponent<Player_Controler>().IsAttacking = false;
-                _currentEspExeCd = 0;
+                espParticleSystems[i].Play();
             }
+
+            nRange.GetComponent<SphereDamageArea>().Create(WeaponStats.EspDamage, _player.GetComponent<PlayerActions>().GunUIarea.transform.position);
+            _player.GetComponent<Player_Controler>().IsAttacking = false;
+            _currentEspExeCd = 0;
+            
         }
     }
 

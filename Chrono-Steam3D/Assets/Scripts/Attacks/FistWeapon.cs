@@ -18,6 +18,8 @@ public class FistWeapon : BladeWeapon
                 else
                     Debug.Log("objVFX tag error");
             }
+
+            _currentEspExeCd = 0;
         }
     }
     public override void AreaAtack()
