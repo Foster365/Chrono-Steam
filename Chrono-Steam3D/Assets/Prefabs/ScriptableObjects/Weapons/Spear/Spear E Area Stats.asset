@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52bc4fcbd8c42b4b8cd0326223a90a0, type: 3}
   m_Name: Spear E Area Stats
   m_EditorClassIdentifier: 
-  _maxDistance: 2.53
+  _maxDistance: 4.27
   _maxAmplitude: 0.74

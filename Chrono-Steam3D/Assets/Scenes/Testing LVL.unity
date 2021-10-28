@@ -172,6 +172,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.scalar
       value: 0.4770494
       objectReference: {fileID: 0}
+    - target: {fileID: 1013629049492753922, guid: c1e8be90a266ea64bb358954e84a7830,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3089873727016889150, guid: c1e8be90a266ea64bb358954e84a7830,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -1686,6 +1691,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167026207}
     m_Modifications:
+    - target: {fileID: 767613767136978331, guid: 3ee101878fc953c499c5ffeb3eb980f0,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 903225211}
+    - target: {fileID: 767613767136978331, guid: 3ee101878fc953c499c5ffeb3eb980f0,
+        type: 3}
+      propertyPath: drawGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1274945351797494628, guid: 3ee101878fc953c499c5ffeb3eb980f0,
         type: 3}
       propertyPath: m_Name
@@ -1842,6 +1857,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1167026207}
     m_Modifications:
+    - target: {fileID: 767613767136978331, guid: 3ee101878fc953c499c5ffeb3eb980f0,
+        type: 3}
+      propertyPath: drawGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1274945351797494628, guid: 3ee101878fc953c499c5ffeb3eb980f0,
         type: 3}
       propertyPath: m_Name

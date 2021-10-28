@@ -16,5 +16,5 @@ MonoBehaviour:
   durability: 100
   duravilitiDecres: 6
   coolDown: 0.3
-  _EspExeCd: 3
+  _EspExeCd: 2.5
   _espDamage: 5
