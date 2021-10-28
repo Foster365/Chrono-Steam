@@ -128,10 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 362952117, guid: c1e8be90a266ea64bb358954e84a7830, type: 3}
-      propertyPath: stunned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 127349553740155044, guid: c1e8be90a266ea64bb358954e84a7830,
         type: 3}
       propertyPath: TrailModule.enabled
@@ -1619,7 +1615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &71475934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1770,7 +1766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &267925565
 RectTransform:
   m_ObjectHideFlags: 0
