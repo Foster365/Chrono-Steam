@@ -24,7 +24,6 @@ TagManager:
   - Spear
   - SpecialAbilityUI
   - PlayerSpawner
-  - UI_Icon
   layers:
   - Default
   - TransparentFX

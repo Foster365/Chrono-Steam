@@ -24,7 +24,6 @@ public class Player_Controler : MonoBehaviour,ILive
     private bool _isSpecial;
     private bool _isAttacking;
     private bool _isleaving;
-    bool isWeaponSlotNull;
     [SerializeField] private bool stunned = false;
     float timer = 0;
 
@@ -51,7 +50,6 @@ public class Player_Controler : MonoBehaviour,ILive
     public bool Stunned { get => stunned; set => stunned = value; }
     public bool Isleaving { get => _isleaving; set => _isleaving = value; }
     public bool IsAttacking { get => _isAttacking; set => _isAttacking = value; }
-    public bool IsWeaponSlotNull { get => isWeaponSlotNull; set => isWeaponSlotNull = true; }
 
     private void Awake()
     {
@@ -224,7 +222,6 @@ public class Player_Controler : MonoBehaviour,ILive
     {
         if(other.gameObject.CompareTag("FloorWeapon"))
         {
-            isWeaponSlotNull = false;
             //Debug.Log("hit Weapon");
             if(_playerStats.Weapon == null)
             {

@@ -63,6 +63,5 @@ public class UtilitiesTags
     public const string HEALTH_UI_TAG = "HealthUI";
     //public const string BOSS_HEALTH_UI_TAG = "HealthUIBoss";
     public const string UNTAGGED_TAG = "Untagged";
-    public const string UI_ICON_TAG = "UI_Icon";
 
 }
