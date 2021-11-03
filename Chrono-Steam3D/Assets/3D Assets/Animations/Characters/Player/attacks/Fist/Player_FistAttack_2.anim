@@ -51952,14 +51952,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.26666668
-    functionName: playParticle
-    data: 
-    objectReferenceParameter: {fileID: 5203904639236254968, guid: b96de1c75a38424419ddf2eba62ed34e,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.3
     functionName: WeaponExecute
     data: 
@@ -51985,14 +51977,6 @@ AnimationClip:
     functionName: WeaponExecute
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6
-    functionName: playParticle
-    data: 
-    objectReferenceParameter: {fileID: 5203904639236254968, guid: b96de1c75a38424419ddf2eba62ed34e,
-      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
@@ -52021,14 +52005,6 @@ AnimationClip:
     functionName: WeaponExecute
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.96666664
-    functionName: playParticle
-    data: 
-    objectReferenceParameter: {fileID: 5203904639236254968, guid: b96de1c75a38424419ddf2eba62ed34e,
-      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

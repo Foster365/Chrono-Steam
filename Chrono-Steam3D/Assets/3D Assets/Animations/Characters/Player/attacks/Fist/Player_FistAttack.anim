@@ -39683,14 +39683,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.36666667
-    functionName: playParticle
-    data: 
-    objectReferenceParameter: {fileID: 5203904639236254968, guid: b96de1c75a38424419ddf2eba62ed34e,
-      type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.53333336
     functionName: WeaponExecute
     data: 

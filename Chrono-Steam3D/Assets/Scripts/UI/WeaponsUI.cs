@@ -17,33 +17,24 @@ public class WeaponsUI : MonoBehaviour
 
     private void Start()
     {
-
     }
 
     private void Update()
     {
         if(GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon != null)
         {
-
-            weaponDurability = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.Durability;
-            weaponMaxDurability = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon.GetComponent<Weapon>().currentDurability;
-
-            print("Weapon Durability" + weaponDurability);
-            print("Weapon Max Durability" + weaponMaxDurability);
+            weaponMaxDurability = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.Durability;
+            weaponDurability = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon.GetComponent<Weapon>().currentDurability;
         }
 
     }
 
     public void DisplayDurability(Image durabilityUI, float value, float maxValue)
     {
-
         if (weaponDurability < 0f)
             weaponDurability = 0f;
 
         durabilityUI.fillAmount = weaponDurability / weaponMaxDurability;
-
-        print("Weapon UI durability" + weaponDurabilityImage.fillAmount);
-
     }
 
 }
