@@ -9,7 +9,7 @@ public class Enemy : Actor
     private EnemyAI AI;
     private Life_Controller _life_Controller;
     [SerializeField] bool dead;
-    Player_Controler _player;
+    Player_Controller _player;
     private bool hurt;
     float timer;
     private bool _itemDroped;
@@ -25,7 +25,7 @@ public class Enemy : Actor
 
     public bool Dead { get => dead; set => dead = value; }
     public bool Hurt { get => hurt; set => hurt = value; }
-    public Player_Controler Player { get => _player; set => _player = value; }
+    public Player_Controller Player { get => _player; set => _player = value; }
     public Life_Controller Life_Controller  => _life_Controller;
     protected virtual void Awake()
     {
@@ -46,7 +46,7 @@ public class Enemy : Actor
         {
             dropNodes.Add(drops[i], rates[i]);
         }
-        _player = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>();
+        _player = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>();
     }
 
     protected virtual void Update()

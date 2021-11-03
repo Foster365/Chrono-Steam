@@ -30,9 +30,9 @@ public class RangeWeapon : Weapon
     public override void Execute()
     {
        // Debug.Log("asdadasd");
-            if (_currentDurability > 0)
+            if (currentDurability > 0)
             {
-                _currentDurability -= _weaponStats.DuravilitiDecres;
+                currentDurability -= _weaponStats.DuravilitiDecres;
                 foreach (var item in ParticleSystems)
                 {
                     item.Play();
@@ -77,9 +77,9 @@ public class RangeWeapon : Weapon
         //    EspParticleSystems[i].Play();
         //}
         #endregion
-        if (_currentDurability > 0)
+        if (currentDurability > 0)
         {
-            _currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DuravilitiDecres;
             
             for (int i = 0; i < espParticleSystems.Count; i++)
             {
@@ -87,7 +87,7 @@ public class RangeWeapon : Weapon
             }
 
             nRange.GetComponent<SphereDamageArea>().Create(WeaponStats.EspDamage, _player.GetComponent<PlayerActions>().GunUIarea.transform.position);
-            _player.GetComponent<Player_Controler>().IsAttacking = false;
+            _player.GetComponent<Player_Controller>().IsAttacking = false;
             _currentEspExeCd = 0;
             
         }

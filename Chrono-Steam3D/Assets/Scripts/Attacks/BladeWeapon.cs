@@ -17,22 +17,22 @@ public class BladeWeapon : Weapon , IAreaAttack
         hitCounter = GameObject.FindGameObjectWithTag("hitCounter").GetComponent<HitCounter>();
         _currentCD = 0;
         _currentEspExeCd = WeaponStats.EspExeCd;
-        _currentDurability = _weaponStats.Durability;
+        currentDurability = _weaponStats.Durability;
         _player = GameObject.FindGameObjectWithTag("Player");
     }
     public override void Execute()
     {
         AreaAtack();
-        _currentDurability -= _weaponStats.DuravilitiDecres;
+        currentDurability -= _weaponStats.DuravilitiDecres;
         _currentCD = _weaponStats.CoolDown;
         //Debug.Log($"Hice {_weaponStats.AttDamage} de daño con {name} a rango melee de distancia");
     }
     public override void EspecialExecute()
     {
         //Debug.Log("Entered in Heavy Weapon SE");
-        if (_currentDurability > 0)
+        if (currentDurability > 0)
         {
-            _currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DuravilitiDecres;
             for (int i = 0; i < espParticleSystems.Count; i++)
             {
                 #region debugcomprobation

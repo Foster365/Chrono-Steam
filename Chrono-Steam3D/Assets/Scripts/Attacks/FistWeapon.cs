@@ -6,9 +6,9 @@ public class FistWeapon : BladeWeapon
 {
     public override void EspecialExecute()
     {
-        if (_currentDurability > 0)
+        if (currentDurability > 0)
         {
-            _currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DuravilitiDecres;
             if (specialOjcVfx != null)
             {
                 if (specialOjcVfx.CompareTag("FloorCrack"))

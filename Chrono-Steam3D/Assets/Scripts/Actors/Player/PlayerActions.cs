@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Player_Controler))]
+[RequireComponent(typeof(Player_Controller))]
 public class PlayerActions : MonoBehaviour,IComand
 {
-    private Player_Controler _player;
+    private Player_Controller _player;
     private int _comboCounter;
     [Header("Ability UIs")]
     [SerializeField] private Image _gunUIarea; // la imagen q voy a mover
@@ -19,7 +19,7 @@ public class PlayerActions : MonoBehaviour,IComand
     // Start is called before the first frame update
     void Start()
     {
-        _player = GetComponent<Player_Controler>();
+        _player = GetComponent<Player_Controller>();
         _comboCounter = 0;
         t = 0;
 
@@ -47,7 +47,8 @@ public class PlayerActions : MonoBehaviour,IComand
                         if (_comboCounter == 1)
                         {
                             if(_player.PlayerStats.Weapon.CompareTag("Blade"))
-                            { 
+                            {
+
                                 _player.Animations.AttackAnimation();
                                 _player.PlayerStats.Weapon.GetComponent<Weapon>().ParticleSystems[0].Play();
                             }
@@ -250,7 +251,7 @@ public class PlayerActions : MonoBehaviour,IComand
         if (_player.Inputs.Action5())
         {
             _player.Animations.PunchAnimation();
-            _player.thrustingPunch();
+            _player.ThrustingPunch();
         }
     }
     public void ResetCombo()

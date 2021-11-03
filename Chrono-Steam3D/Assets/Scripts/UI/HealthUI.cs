@@ -33,13 +33,13 @@ public class HealthUI : MonoBehaviour
     private void Update()
     {
         //Player Health
-        playerHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().Life_Controller.CurrentLife;
-        playerMaxHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().PlayerStats.MaxLife;
+        playerHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().Life_Controller.CurrentLife;
+        playerMaxHealth = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.MaxLife;
 
         //Boss Health
 
-        bossHealth = bossEnemy.GetComponent<Enemy>().Stats.MaxHealth;
-        bossMaxHealth = bossEnemy.GetComponent<Enemy>().Life_Controller.CurrentLife;
+        //bossHealth = bossEnemy.GetComponent<Enemy>().Stats.MaxHealth;
+        //bossMaxHealth = bossEnemy.GetComponent<Enemy>().Life_Controller.CurrentLife;
 
         //DisplayHealth(pjHealthUI, playerHealth, playerMaxHealth);
         //DisplayHealth(bossHealthUI, bossHealth, bossMaxHealth);

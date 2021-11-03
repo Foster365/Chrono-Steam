@@ -19,7 +19,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player_Controler>().Life_Controller.GetDamage(bulletDamage);
+            other.gameObject.GetComponent<Player_Controller>().Life_Controller.GetDamage(bulletDamage);
             Destroy(gameObject);
         }
     }

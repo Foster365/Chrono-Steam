@@ -39,12 +39,12 @@ public class EnemyCombat : Combat
             {
                 bossAI.Animations.AttackAnimation();
                 if (GameManager.Instance.PlayerInstance != null)
-                    Player.gameObject.GetComponent<Player_Controler>().Life_Controller.GetDamage(bossAI.Enemy.Stats.MeleeDamage);
+                    Player.gameObject.GetComponent<Player_Controller>().Life_Controller.GetDamage(bossAI.Enemy.Stats.MeleeDamage);
             }
             else
             {
                 if (GameManager.Instance.PlayerInstance != null)
-                    Player.gameObject.GetComponent<Player_Controler>().Life_Controller.GetDamage(_enemy.Enemy.Stats.MeleeDamage);
+                    Player.gameObject.GetComponent<Player_Controller>().Life_Controller.GetDamage(_enemy.Enemy.Stats.MeleeDamage);
             }
         }
     }

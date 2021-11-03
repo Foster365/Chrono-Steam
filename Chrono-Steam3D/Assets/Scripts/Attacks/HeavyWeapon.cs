@@ -24,9 +24,9 @@ public class HeavyWeapon : BladeWeapon
     {
 
         //Debug.Log("Entered in Heavy Weapon SE");
-        if (_currentDurability > 0)
+        if (currentDurability > 0)
         {
-            _currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DuravilitiDecres;
 
             if (_currentEspExeCd >= WeaponStats.EspExeCd)
             {

@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] Dictionary<string, Image> UIElements;
     [SerializeField] HealthUI healthUI;
-    [SerializeField] DurabilityUI durabilityUI;
+    [SerializeField] WeaponsUI durabilityUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthUI.DisplayHealth(healthUI.PjHealthUI, healthUI.PlayerHealth, healthUI.PlayerMaxHealth);
+        //healthUI.DisplayHealth(healthUI.PjHealthUI, healthUI.PlayerHealth, healthUI.PlayerMaxHealth);
+        durabilityUI.DisplayDurability(durabilityUI.WeaponDurabilityImage, durabilityUI.WeaponDurability, durabilityUI.WeaponMaxDurability);
         //durabilityUI.DisplayDurability(currentWPUI, wpDurability, wpMaxDurability);
         //If trigger boss Health UI
         //Enable Boss UI

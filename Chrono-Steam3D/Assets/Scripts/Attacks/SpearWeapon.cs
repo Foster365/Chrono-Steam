@@ -7,9 +7,9 @@ public class SpearWeapon : BladeWeapon
     public override void EspecialExecute()
     {
         
-        if (_currentDurability > 0)
+        if (currentDurability > 0)
         {
-            _currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DuravilitiDecres;
             for (int i = 0; i < espParticleSystems.Count; i++)
             {
                 #region debugcomprobation

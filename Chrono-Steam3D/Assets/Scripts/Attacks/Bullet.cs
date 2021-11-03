@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            float weapondamage = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>()
+            float weapondamage = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>()
                                     .PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.EspDamage;
             other.gameObject.GetComponent<Enemy>().Life_Controller.GetDamage(weapondamage);
         }

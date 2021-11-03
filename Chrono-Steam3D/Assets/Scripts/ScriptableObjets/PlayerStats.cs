@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     [SerializeField]
-    private float _speed;
+    private float _speed = 10;
     [SerializeField]
     private float _dashDistance;
     [SerializeField]
@@ -23,6 +23,7 @@ public class PlayerStats : ScriptableObject
     private GameObject _weapon;
 
     public float Speed => _speed;
+
     public float DashDistance => _dashDistance;
     public float DashDuration => _dashDuration;
     public float DashCoolDown => _dashCoolDown;

@@ -14,7 +14,7 @@ public class Smash_controler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            var player = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>();
+            var player = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>();
             if (!player.IsDashing)
             {
                 player.Life_Controller.GetDamage(damage);

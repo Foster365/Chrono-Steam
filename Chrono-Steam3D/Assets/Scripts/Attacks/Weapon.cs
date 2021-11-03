@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour, IComand
     protected List<SkinnedMeshRenderer> weaponMaterials = new List<SkinnedMeshRenderer>();
     protected float _currentEspExeCd = 0;
     protected float _currentCD;
-    protected int _currentDurability;
+    protected internal int currentDurability;
     public bool drawGizmos;
     private bool isDrop;
     private string weaponTag;
@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour, IComand
     {
         _currentCD = 0;
         _currentEspExeCd = WeaponStats.EspExeCd;
-        _currentDurability = _weaponStats.Durability;
+        currentDurability = _weaponStats.Durability;
        /* _rb = this.gameObject.GetComponent<Rigidbody>();
         if (_rb = null)
              gameObject.AddComponent<Rigidbody>();*/
@@ -80,7 +80,7 @@ public class Weapon : MonoBehaviour, IComand
     // Update is called once per frame
     public virtual void Update()
     {
-        if (_currentDurability <= 0 )
+        if (currentDurability <= 0 )
         {
             if (this.gameObject != null && !isDrop)
             {
@@ -96,7 +96,7 @@ public class Weapon : MonoBehaviour, IComand
                 _rb?.AddTorque(transform.right * 1000f);
 
                 transform.parent = null;
-                GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().PlayerStats.Weapon = null;
+                GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().PlayerStats.Weapon = null;
                 //GameObject weaponRef = GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().PlayerStats.Weapon;
                 isDrop = true;
                 Destroy(this.gameObject, 2f);

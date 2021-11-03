@@ -7,7 +7,7 @@ public class TeslaBall : MonoBehaviour
     [SerializeField] float rotSpeed;
     [SerializeField] float speed;
     [SerializeField] float damage;
-    Player_Controler player;
+    Player_Controller player;
     [SerializeField] ParticleSystem[] particles;
 
     Vector3 playerPos;
@@ -16,7 +16,7 @@ public class TeslaBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Player_Controler>();
+        player = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Player_Controller>();
     }
 
     // Update is called once per frame

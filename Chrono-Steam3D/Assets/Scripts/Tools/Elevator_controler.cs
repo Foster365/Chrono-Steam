@@ -21,7 +21,7 @@ public class Elevator_controler : MonoBehaviour
     {
         if (goUp)
         {
-            GameManager.Instance.PlayerInstance.GetComponent<Player_Controler>().Isleaving = true;
+            GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>().Isleaving = true;
         }
     }
     //se llama desde el animator
@@ -43,7 +43,7 @@ public class Elevator_controler : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 MainCamera.GetComponent<CameraFolow>().enabled = false;
-                other.gameObject.GetComponent<Player_Controler>().Rb.velocity =Vector3.zero ;
+                other.gameObject.GetComponent<Player_Controller>().Rb.velocity =Vector3.zero ;
                 goUp = true;
                 Animator.SetBool("GoUp", true);
             }
