@@ -211,6 +211,16 @@ PrefabInstance:
       propertyPath: weaponMaterials.Array.size
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5283807001857998258, guid: e09c882a4ca30cf48bd66e3da491ce2a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570847210191274307, guid: e09c882a4ca30cf48bd66e3da491ce2a,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7319857539013820800, guid: e09c882a4ca30cf48bd66e3da491ce2a,
         type: 3}
       propertyPath: m_Name

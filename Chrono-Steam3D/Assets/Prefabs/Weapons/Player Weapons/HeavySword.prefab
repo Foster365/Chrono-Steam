@@ -382,6 +382,16 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5749892945899594868, guid: 797ee248261f4504f9071cdf2c4300d4,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749892945899594868, guid: 797ee248261f4504f9071cdf2c4300d4,
+        type: 3}
+      propertyPath: TrailModule.worldSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5749892945899594870, guid: 797ee248261f4504f9071cdf2c4300d4,
         type: 3}
       propertyPath: m_Name
