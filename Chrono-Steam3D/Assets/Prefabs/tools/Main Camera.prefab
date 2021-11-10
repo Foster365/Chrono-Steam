@@ -210,3 +210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 512

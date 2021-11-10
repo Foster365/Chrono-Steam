@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3612013577845012891}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Boss_Health_UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3612013578824250295}
   m_Layer: 5
   m_Name: Fill
-  m_TagString: Untagged
+  m_TagString: Boss_Health_UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
