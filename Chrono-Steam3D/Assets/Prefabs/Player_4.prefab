@@ -1308,6 +1308,7 @@ MonoBehaviour:
   _playerStats: {fileID: 11400000, guid: bcfc26e2572e39d41867d525cf528b69, type: 2}
   weaponSlot: {fileID: 4774485287249084516}
   stunParticles: {fileID: 4508630419935969439}
+  weaponsUIICons: {fileID: 0}
 --- !u!114 &362952118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,6 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185fcb6cc4e5bbe40994d578585160c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _releaseTime: 0.5
   _gunUIarea: {fileID: 6940699773878960504}
   _gunUIdistance: {fileID: 1217763218554114032}
   _canvasCenter: {fileID: 3007526791380951157}

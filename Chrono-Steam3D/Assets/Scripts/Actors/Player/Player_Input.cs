@@ -40,7 +40,15 @@ public class Player_Input : MonoBehaviour
     }
     public bool Action3()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
+        {
+            return true;
+        }
+        return false;
+    }
+    public bool ReleaseAction3()
+    {
+        if (Input.GetKeyUp(KeyCode.E))
         {
             return true;
         }

@@ -8,6 +8,8 @@ public class PlayerActions : MonoBehaviour,IComand
 {
     private Player_Controller _player;
     private int _comboCounter;
+    private float _currentReleaceTime;
+    [SerializeField] float _releaseTime;
     [Header("Ability UIs")]
     [SerializeField] private Image _gunUIarea; // la imagen q voy a mover
     [SerializeField] private Image _gunUIdistance;// la imagen q marca la distancia
@@ -22,7 +24,7 @@ public class PlayerActions : MonoBehaviour,IComand
         _player = GetComponent<Player_Controller>();
         _comboCounter = 0;
         t = 0;
-
+        _currentReleaceTime = _releaseTime;
     }
     public void Execute()
     {
@@ -188,7 +190,7 @@ public class PlayerActions : MonoBehaviour,IComand
             {
                 if (_player.PlayerStats.Weapon.GetComponent<Weapon>().CurrentEspExeCd >= _player.PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.EspExeCd)
                 {
-                    _player.IsAttacking = true;
+                    _player.IsSpecial = true;
                     if (_player.PlayerStats.Weapon.CompareTag("Blade"))
                     {
                         _player.Animations.SpecialAttackAnimation();
@@ -223,34 +225,47 @@ public class PlayerActions : MonoBehaviour,IComand
             }
         }
         #endregion
+        #region E-buton
         if (_player.Inputs.Action3())
         {
-            if (_player.PlayerStats.Weapon != null)
+            if (_currentReleaceTime <=0)
             {
-                _player.IsWeaponSlotNull = true;
-                FindObjectOfType<AudioManager>().Play("BrokenWeapon");
-                _player.PlayerStats.Weapon.GetComponent<Weapon>().TurnOffWeaponFresnel();
-                Debug.Log("Se desprendió la weapon");
-                if (!_player.PlayerStats.Weapon.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                if (_player.PlayerStats.Weapon != null)
                 {
-                    Rigidbody rb = _player.PlayerStats.Weapon.AddComponent<Rigidbody>();
-                    _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb = rb;
+                    _player.IsWeaponSlotNull = true;
+                    FindObjectOfType<AudioManager>().Play("BrokenWeapon");
+                    _player.PlayerStats.Weapon.GetComponent<Weapon>().TurnOffWeaponFresnel();
+                    //Debug.Log("Se desprendió la weapon");
+                    if (!_player.PlayerStats.Weapon.TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                    {
+                        Rigidbody rb = _player.PlayerStats.Weapon.AddComponent<Rigidbody>();
+                        _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb = rb;
+                    }
+                    GameObject WeaponRef = _player.PlayerStats.Weapon;
+                    _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb?.AddExplosionForce(500f, transform.position, 10f);
+                    _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb?.AddTorque(_player.PlayerStats.Weapon.transform.right * 1000f);
+                    _player.PlayerStats.Weapon.transform.parent = null;
+                    _player.PlayerStats.Weapon = null;
+                    _currentReleaceTime = _releaseTime;
+                    Destroy(WeaponRef, 2f);
                 }
-                GameObject WeaponRef = _player.PlayerStats.Weapon;
-                _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb?.AddExplosionForce(500f, transform.position, 10f);
-                _player.PlayerStats.Weapon.GetComponent<Weapon>().Rb?.AddTorque(_player.PlayerStats.Weapon.transform.right * 1000f);
-                _player.PlayerStats.Weapon.transform.parent = null;
-                _player.PlayerStats.Weapon = null;
-                Destroy(WeaponRef, 2f);
+            }
+            else
+            {
+                _currentReleaceTime -= Time.deltaTime;
             }
         }
+        if (_player.Inputs.ReleaseAction3())
+        {
+            _currentReleaceTime = _releaseTime;
+        }
+        #endregion
         if (_player.Inputs.Action4() && !_player.IsDashing && _player.CurrentDashCoolDown <= 0)
         {
             _player.Dash();
         }
         if (_player.Inputs.Action5())
         {
-            _player.Animations.PunchAnimation();
             _player.ThrustingPunch();
         }
     }

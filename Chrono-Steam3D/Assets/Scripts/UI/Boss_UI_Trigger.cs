@@ -18,7 +18,7 @@ public class Boss_UI_Trigger : MonoBehaviour
 
     private void Update()
     {
-        CheckUIEnable();
+        //CheckUIEnable();
     }
 
     bool CheckForPlayer(LayerMask playerRef)

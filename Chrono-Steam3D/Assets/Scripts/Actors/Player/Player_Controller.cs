@@ -23,6 +23,7 @@ public class Player_Controller : MonoBehaviour,ILive
     private bool _isDashing;
     private bool _isSpecial;
     private bool _isAttacking;
+    private bool _isPunching;
     private bool _isleaving;
     bool isWeaponSlotNull;
     [SerializeField] private bool stunned = false;
@@ -54,6 +55,7 @@ public class Player_Controller : MonoBehaviour,ILive
     public bool Isleaving { get => _isleaving; set => _isleaving = value; }
     public bool IsAttacking { get => _isAttacking; set => _isAttacking = value; }
     public bool IsWeaponSlotNull { get => isWeaponSlotNull; set => isWeaponSlotNull = true; }
+    public bool IsSpecial { get => _isSpecial; set => _isSpecial = value; }
 
     private void Awake()
     {
@@ -99,7 +101,7 @@ public class Player_Controller : MonoBehaviour,ILive
         if (_currentPunchCD>0)
         {
             _currentPunchCD -= Time.deltaTime;
-            _isAttacking = false;
+            _isPunching = false;
         }
         Actions();
         //Debug.Log(Life_Controller.CurrentLife);
@@ -130,7 +132,7 @@ public class Player_Controller : MonoBehaviour,ILive
 
     private void FixedUpdate()
     {
-        if(!_isDashing && !_isAttacking && !_isleaving && !_isSpecial)
+        if(!_isDashing && !_isAttacking && !_isleaving && !_isSpecial && !_isPunching)
         {
             Movement();
             //Debug.Log(_currentDashCoolDown);
@@ -160,24 +162,34 @@ public class Player_Controller : MonoBehaviour,ILive
             }
         }
         
+        if (_isPunching)
+        {
+            if (_currentPunchCD <= 0)
+            {
+                if (_currentPunchDuration <= 0)
+                {
+                    _isPunching = false;
+                    // Debug.Log("punched");
+                    _currentPunchCD = PlayerStats.AbilitiStats.PunchCoolDown;
+                    _currentPunchDuration = PlayerStats.AbilitiStats.PunchDuration;
+                }
+                else
+                {
+                    _isPunching = true;
+                    _animations.PunchAnimation();
+                    _currentPunchDuration -= Time.fixedDeltaTime;
+                    var velocity = PlayerStats.AbilitiStats.PunchDistance / PlayerStats.AbilitiStats.PunchDuration;
+                    float prevVelocityY = _rb.velocity.y;
+                    Vector3 v = transform.forward * velocity;
+                    v.y = prevVelocityY;
+                    _rb.velocity = v;
+                }
+            }
+            
+        }
         if (_isSpecial)
         {
-            if (_currentPunchDuration <= 0)
-            {
-                _isSpecial = false;
-               // Debug.Log("punched");
-                _currentPunchCD = PlayerStats.AbilitiStats.PunchCoolDown;
-                _currentPunchDuration = PlayerStats.AbilitiStats.PunchDuration;
-            }
-            else
-            {
-                _currentPunchDuration -= Time.fixedDeltaTime;
-                var velocity = PlayerStats.AbilitiStats.PunchDistance / PlayerStats.AbilitiStats.PunchDuration;
-                float prevVelocityY = _rb.velocity.y;
-                Vector3 v = transform.forward * velocity;
-                v.y = prevVelocityY;
-                _rb.velocity = v;
-            }
+            //GetComponent<LookAtMouse>().enabled = false;
         }
 
         if (_isAttacking)
@@ -221,7 +233,7 @@ public class Player_Controller : MonoBehaviour,ILive
     public void ThrustingPunch()
     {
         _rb.velocity = Vector3.zero;
-        _isSpecial = true;
+        _isPunching = true;
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -310,6 +322,8 @@ public class Player_Controller : MonoBehaviour,ILive
     {
         _actions.ResetCombo();
         _isAttacking = false;
+        _isSpecial = false;
+        GetComponent<LookAtMouse>().enabled = true;
     }
     private void OnDead() {
 

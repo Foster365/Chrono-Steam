@@ -42,7 +42,7 @@ public class HealthUI : MonoBehaviour
         bossHealth =  bossEnemy.GetComponent<Enemy>().Life_Controller.CurrentLife;
 
         DisplayHealth(pjHealthUI, playerHealth, playerMaxHealth);
-        DisplayHealth(bossHealthUI, bossHealth, bossMaxHealth);
+        //DisplayHealth(bossHealthUI, bossHealth, bossMaxHealth);
     }
 
     public void DisplayHealth(Image healthUI, float value, float maxValue)
