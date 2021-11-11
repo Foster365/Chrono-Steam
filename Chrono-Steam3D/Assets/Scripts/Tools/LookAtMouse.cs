@@ -18,7 +18,7 @@ public class LookAtMouse : MonoBehaviour
         LookMouse();
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 destination = new Vector3(mousePos.x, mousePos.y, 0);
-        // target.transform.position = destination;
+        //target.transform.position = destination;
     }
     void LookMouse()
     {

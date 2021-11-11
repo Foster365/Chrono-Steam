@@ -190,6 +190,7 @@ public class PlayerActions : MonoBehaviour,IComand
             {
                 if (_player.PlayerStats.Weapon.GetComponent<Weapon>().CurrentEspExeCd >= _player.PlayerStats.Weapon.GetComponent<Weapon>().WeaponStats.EspExeCd)
                 {
+                    _player.PrevRotation = _player.Rb.rotation;
                     _player.IsSpecial = true;
                     if (_player.PlayerStats.Weapon.CompareTag("Blade"))
                     {
@@ -264,7 +265,7 @@ public class PlayerActions : MonoBehaviour,IComand
         {
             _player.Dash();
         }
-        if (_player.Inputs.Action5())
+        if (_player.Inputs.Action5() && _player.CurrentPunchCD<=0)
         {
             _player.ThrustingPunch();
         }

@@ -13,6 +13,7 @@ public class Player_Controller : MonoBehaviour,ILive
     private Player_Input _inputs;
     private Life_Controller _life_Controller;
     private PlayerAnimations _animations;
+    private Quaternion _prevRotation;
     private PlayerActions _actions;
     private HitCounter hitCounter;
     private float _currentDashCoolDown;
@@ -50,12 +51,14 @@ public class Player_Controller : MonoBehaviour,ILive
     public bool IsDashing => _isDashing;
     public float CurrentDashCoolDown => _currentDashCoolDown;
     public float CurrentPunchDuration => _currentPunchDuration;
+    public float CurrentPunchCD => _currentPunchCD;
 
     public bool Stunned { get => stunned; set => stunned = value; }
     public bool Isleaving { get => _isleaving; set => _isleaving = value; }
     public bool IsAttacking { get => _isAttacking; set => _isAttacking = value; }
     public bool IsWeaponSlotNull { get => isWeaponSlotNull; set => isWeaponSlotNull = true; }
     public bool IsSpecial { get => _isSpecial; set => _isSpecial = value; }
+    public Quaternion PrevRotation { get => _prevRotation; set => _prevRotation = value; }
 
     private void Awake()
     {
@@ -189,7 +192,8 @@ public class Player_Controller : MonoBehaviour,ILive
         }
         if (_isSpecial)
         {
-            //GetComponent<LookAtMouse>().enabled = false;
+            GetComponent<LookAtMouse>().enabled = false;
+            _rb.rotation =  _prevRotation;
         }
 
         if (_isAttacking)

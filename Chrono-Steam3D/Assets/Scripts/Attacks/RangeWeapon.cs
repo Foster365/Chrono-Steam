@@ -87,7 +87,8 @@ public class RangeWeapon : Weapon
             }
 
             nRange.GetComponent<SphereDamageArea>().Create(WeaponStats.EspDamage, _player.GetComponent<PlayerActions>().GunUIarea.transform.position);
-            _player.GetComponent<Player_Controller>().IsAttacking = false;
+            _player.GetComponent<Player_Controller>().IsSpecial = false;
+            _player.GetComponent<LookAtMouse>().enabled = true;
             _currentEspExeCd = 0;
             
         }
