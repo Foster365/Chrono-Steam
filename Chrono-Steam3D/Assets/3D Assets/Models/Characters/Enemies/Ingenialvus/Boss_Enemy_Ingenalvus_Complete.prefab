@@ -4864,7 +4864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teslaBall: {fileID: 1030898536900969781, guid: f3b60edda73cf614a97a407ec5cbfa00,
     type: 3}
-  smashObject: {fileID: 3331244703157365176, guid: b9a580be51d65a045be20c22c8584290,
+  smashObject: {fileID: 3858577341215752044, guid: 6dc7c5da0f3dd5946ae34ad579426f4f,
     type: 3}
   clapObject: {fileID: 516831458042850608, guid: 2d298b93102b49948a6802a071661dcc,
     type: 3}
@@ -4923,6 +4923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b67ee66cf8938341bfd2cdba507b484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossFillAmountImage: {fileID: 0}
+  bossHealthUIImage: {fileID: 0}
 --- !u!65 &8975674031679549299
 BoxCollider:
   m_ObjectHideFlags: 0
