@@ -26,6 +26,7 @@ TagManager:
   - PlayerSpawner
   - UI_Icon
   - Boss_Health_UI
+  - Health_Frame_UI
   layers:
   - Default
   - TransparentFX
