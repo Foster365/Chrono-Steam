@@ -51,8 +51,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: emy_Ingenialvus_clap_attack
-  m_Speed: 2
+  m_Name: Enemy_Ingenialvus_clap_attack
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3585791612968833958}
@@ -390,7 +390,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ingenialvus_Attack_3
-  m_Speed: 2.3
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1015996715439389002}
@@ -752,7 +752,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ingenialvus_Unblock
-  m_Speed: 2
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8963488309827971025}
@@ -943,7 +943,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ingenialvus_Dodge
-  m_Speed: 2
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8464771461322712692}
@@ -1218,7 +1218,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ingenialvus_Attack_1
-  m_Speed: 2
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1252646916027607771}
@@ -1336,7 +1336,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_Ingenialvus_Attack_tesla
-  m_Speed: 2
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6803954838325772403}

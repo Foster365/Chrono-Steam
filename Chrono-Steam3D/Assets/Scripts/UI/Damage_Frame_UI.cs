@@ -31,7 +31,7 @@ public class Damage_Frame_UI : MonoBehaviour
         tempColor.a = -(playerHealth/playerMaxHealth)+1;
         playerDamageFrameImage.color = tempColor;
 
-        Debug.Log("Fill Amount is: " + tempColor.a);
+        //Debug.Log("Fill Amount is: " + tempColor.a);
 
 
     }

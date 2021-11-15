@@ -118027,6 +118027,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlayParticle
+    data: 
+    objectReferenceParameter: {fileID: 8063850961999099038, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.033333335
     functionName: OnAttack
     data: 
