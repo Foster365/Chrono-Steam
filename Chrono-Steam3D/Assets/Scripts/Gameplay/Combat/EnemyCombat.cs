@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyCombat : Combat
 {
-    private EnemyAI _enemy;
+    private Enemy _enemy;
     public bool attack = false;
     //private Animator animator;
     private void Start()
     {
-        _enemy = gameObject.GetComponent<EnemyAI>();
+        _enemy = gameObject.GetComponent<Enemy>();
         //hitEnemies = new List<Collider>();
         //hitEnemies.Add( GameManager.Instance.PlayerInstance.GetComponent<Collider>() );
         //animator = GetComponent<Animator>();
@@ -28,6 +28,23 @@ public class EnemyCombat : Combat
         }
     }
 
+    public virtual void Attack()
+    {
+        if(gameObject.TryGetComponent<BossAI>(out var bossAI))
+        {
+            bossAI.Animations.AttackAnimation();
+        }
+        else
+        {
+            _enemy.Animations.AttackAnimation();
+        }
+    }
+
+    public virtual void OnAttack()
+    {
+        DoDamage();
+    }
+
     public override void DoDamage()
     {
         base.DoDamage();
@@ -44,25 +61,8 @@ public class EnemyCombat : Combat
             else
             {
                 if (GameManager.Instance.PlayerInstance != null)
-                    Player.gameObject.GetComponent<Player_Controller>().Life_Controller.GetDamage(_enemy.Enemy.Stats.MeleeDamage);
+                    Player.gameObject.GetComponent<Player_Controller>().Life_Controller.GetDamage(_enemy.Stats.MeleeDamage);
             }
         }
-    }
-
-    public virtual void Attack()
-    {
-        if(gameObject.TryGetComponent<BossAI>(out var bossAI))
-        {
-            bossAI.Animations.AttackAnimation();
-        }
-        else
-        {
-            _enemy.Animations.AttackAnimation();
-        }
-    }
-
-    public virtual void OnAttack()
-    {
-        DoDamage();
     }
 }

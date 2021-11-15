@@ -48,34 +48,37 @@ public class BullCharge : MonoBehaviour
         {
             timer2 = 0;
         }
-
-        if ((Vector3.Distance(transform.position, previousPlayerPos) < chargeRange) && (lineOfSight.Target) && (timer >= chargeCooldown) && (!enemy.Player.Life_Controller.isDead) && (!enemy.Life_Controller.isDead))
+        if (!Charge1)
         {
-            if (gameObject.TryGetComponent<BossAI>(out var bossAI))
+            if (((Vector3.Distance(transform.position, previousPlayerPos) > chargeRange) && (lineOfSight.Target)) && (timer >= chargeCooldown) && (!enemy.Player.Life_Controller.isDead) && (!enemy.Life_Controller.isDead))
             {
-                if (bossCharge)
+                if (gameObject.TryGetComponent<BossAI>(out var bossAI))
                 {
-                    Charge();
+                    if (bossCharge)
+                    {
+                        Charge();
+                    }
                 }
-            }
-            else
-                Charge();
-        }
-        else
-        {
-            if (chargeFirstTime)
-            {
-                timer = chargeCooldown;
+                else
+                    Charge();
             }
             else
             {
-                timer += 1 * Time.deltaTime;
-            }
+                if (chargeFirstTime)
+                {
+                    timer = chargeCooldown;
+                }
+                else
+                {
+                    timer += 1 * Time.deltaTime;
+                }
 
-            Charge1 = false;
-            if (enemy.Player!=null)
-            previousPlayerPos = enemy.Player.transform.position;
+                Charge1 = false;
+                if (enemy.Player != null)
+                    previousPlayerPos = enemy.Player.transform.position;
+            }
         }
+        
     }
 
     void Charge()
@@ -96,6 +99,7 @@ public class BullCharge : MonoBehaviour
         if (Vector3.Distance(transform.position, previousPlayerPos) <= 1f || collisionWithPlayer)
         {
             timer = 0f;
+            Charge1 = false;
             //Debug.Log("Charge del bull");
         }
     }

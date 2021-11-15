@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(EnemyAnimations))]
 public class Enemy : Actor
 {
     private EnemyAI AI;
     private Life_Controller _life_Controller;
+    private EnemyAnimations animations;
     [SerializeField] bool dead;
     Player_Controller _player;
     private bool hurt;
@@ -27,11 +29,13 @@ public class Enemy : Actor
     public bool Hurt { get => hurt; set => hurt = value; }
     public Player_Controller Player { get => _player; set => _player = value; }
     public Life_Controller Life_Controller  => _life_Controller;
+    public EnemyAnimations Animations => animations;
     protected virtual void Awake()
     {
         //_life_Controller = new Life_Controller(Stats.MaxHealth);
         _life_Controller = new Life_Controller(Stats.LifeRange[Random.Range(0, Stats.LifeRange.Count)]);
-        
+        animations = GetComponent<EnemyAnimations>();
+
         roulette = new Roulette();
         _itemDroped = false;
     }
@@ -74,7 +78,7 @@ public class Enemy : Actor
             }
             else
             {
-                AI.Animations.DamagedAnimation();
+                animations.DamagedAnimation();
             }
 
             for (int i = 0; i < particleSystems.Count; i++)
@@ -125,7 +129,7 @@ public class Enemy : Actor
         }
         else
         {
-            AI.Animations.DeathAnimation();
+            animations.DeathAnimation();
             //encada una de mis partes del cuerpo...
             foreach (var itemA in bodyParts)
             {
@@ -177,7 +181,7 @@ public class Enemy : Actor
             }
             else
             {
-                AI.Animations.DamagedAnimation();
+                animations.DamagedAnimation();
                 Life_Controller.GetDamage(other.gameObject.GetComponent<Weapon>().WeaponStats.AttDamage);
             }
         }
