@@ -75,7 +75,7 @@ public class BossAI : MonoBehaviour
         flee.move = false;
         seek.move = false;
         obstacleavoidance.move = false;
-        gameObject.GetComponent<BullCharge>().BossCharge = false;
+        gameObject.GetComponent<BigEnemyAI>().BossCharge = false;
 
         if (currentAttackTime >= defaultAttackTime)
         {
@@ -92,16 +92,16 @@ public class BossAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, sight.Target.position) > attackRange )
         {
-            if (gameObject.TryGetComponent<BullCharge>(out var bullCharge))
+            if (gameObject.TryGetComponent<BigEnemyAI>(out var bullCharge))
             {
-                if (bullCharge.Charge1)
+                /*if (bullCharge.Charge1)
                 {
                     seek.move = false;
                 }
                 else
                 {
                     seek.move = true;
-                }
+                }*/
                  animations.RunAnimation();
             }else
             {
@@ -165,7 +165,7 @@ public class BossAI : MonoBehaviour
     {
         flee.move = false;
         seek.move = false;
-        gameObject.GetComponent<BullCharge>().BossCharge = true;
+        gameObject.GetComponent<BigEnemyAI>().BossCharge = true;
         Debug.Log("Charge");
     }
 

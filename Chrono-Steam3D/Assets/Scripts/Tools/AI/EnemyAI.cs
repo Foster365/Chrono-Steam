@@ -3,69 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(ELineOfSight), typeof(Seek), typeof(Flee))]
+[RequireComponent(typeof(ELineOfSight), typeof(Seek))]
 [RequireComponent(typeof(ObstacleAvoidance), typeof(Enemy), typeof(EnemyCombat))]
 public class EnemyAI : MonoBehaviour
 {
-    private Node initialNode;
-    ELineOfSight sight;
-    Seek _seek;
-    Flee flee;
-    ObstacleAvoidance obstacleavoidance;
-    private Enemy enemy;
-    EnemyCombat combat;
-    private bool attackTarget;
-    [SerializeField] float attackRange;
+    protected Node initialNode;
+    protected ELineOfSight sight;
+    protected Seek _seek;
+    protected ObstacleAvoidance obstacleavoidance;
+    protected Enemy enemy;
+    protected EnemyCombat combat;
+    protected bool attackTarget;
 
-    public Enemy Enemy { get => enemy; set => enemy = value; }
-
-    private void Awake()
+    public virtual void Awake()
     {
         CreateDecisionTree();
     }
 
-    private void Start()
+    public virtual void Start()
     {
         enemy = gameObject.GetComponent<Enemy>();
         sight = gameObject.GetComponent<ELineOfSight>();
         _seek = gameObject.GetComponent<Seek>();
-        flee = gameObject.GetComponent<Flee>();
         obstacleavoidance = gameObject.GetComponent<ObstacleAvoidance>();
         combat = gameObject.GetComponent<EnemyCombat>();
-        CreateDecisionTree();
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (!enemy.Dead)
         {
             initialNode.Execute();
         }else
         {
-            flee.move = false;
-            _seek.move = false;
-            combat.attack = false;
-            obstacleavoidance.move = false;
+            
         }
     }
-    private void CreateDecisionTree()
+    protected virtual void CreateDecisionTree()
     {
         ActionNode Hit = new ActionNode(Attack);
         ActionNode Patrol = new ActionNode(Patroling);
         ActionNode seek = new ActionNode(Seeking);
+        ActionNode dead = new ActionNode(die);
 
-        QuestionNode inAttackRange = new QuestionNode(() => (Vector3.Distance(transform.position, sight.Target.position)) < attackRange, Hit, seek);
+        QuestionNode inAttackRange = new QuestionNode(() => (Vector3.Distance(transform.position, sight.Target.position)) < combat.AttackRange, Hit, seek);
 
         QuestionNode doIHaveTarget = new QuestionNode(() => (sight.targetInSight) || (enemy.Hurt), inAttackRange, Patrol);
 
-        QuestionNode playerAlive = new QuestionNode(() => (enemy.Player.Life_Controller.isDead), doIHaveTarget, Patrol);
+        QuestionNode playerAlive = new QuestionNode(() => !(enemy.Player.Life_Controller.isDead), doIHaveTarget, Patrol);
 
-        QuestionNode doIHaveHealth = new QuestionNode(() => (enemy.Life_Controller.CurrentLife) <= 0f, playerAlive, doIHaveTarget);
+        QuestionNode doIHaveHealth = new QuestionNode(() => !(enemy.Life_Controller.isDead) , playerAlive, dead);
 
         initialNode = doIHaveHealth;
     }
 
-    private void Attack()
+    protected virtual void Attack()
     {
         obstacleavoidance.move = false;
         _seek.move = false;
@@ -80,20 +72,21 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            _seek.move = false;
             combat.attack = false;
         }
     }
 
-    private void Patroling()
+    protected virtual void Patroling()
     {
+        Debug.Log("patrol");
         _seek.move = false;
         combat.attack = false;
         obstacleavoidance.move = true;
         enemy.Animations.MovingAnimation(true);
     }
-    private void Seeking()
+    protected virtual void Seeking()
     {
+        Debug.Log("seek");
         if (!combat.attack)
         {
             _seek.move = true;
@@ -102,9 +95,17 @@ public class EnemyAI : MonoBehaviour
             enemy.Animations.MovingAnimation(true);
         }
     }
+    protected virtual void die()
+    {
+        _seek.move = false;
+        combat.attack = false;
+        obstacleavoidance.move = false;
+    }
     //se llama desde el animator 
     public void AttackOver()
     {
         combat.attack = false;
+
+        Debug.Log("atack over");
     }
 }
