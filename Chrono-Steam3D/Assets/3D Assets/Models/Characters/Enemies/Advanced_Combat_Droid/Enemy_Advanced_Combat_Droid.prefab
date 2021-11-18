@@ -323,7 +323,7 @@ MonoBehaviour:
   rotSpeed: 10
   chargeRange: 4
   chargeCooldown: 10
-  stunDuration: 0.5
+  stunDuration: 0.75
 --- !u!114 &3003264591792520297
 MonoBehaviour:
   m_ObjectHideFlags: 0
