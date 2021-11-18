@@ -78,7 +78,6 @@ public class EnemyAI : MonoBehaviour
 
     protected virtual void Patroling()
     {
-        Debug.Log("patrol");
         _seek.move = false;
         combat.attack = false;
         obstacleavoidance.move = true;
@@ -86,7 +85,6 @@ public class EnemyAI : MonoBehaviour
     }
     protected virtual void Seeking()
     {
-        Debug.Log("seek");
         if (!combat.attack)
         {
             _seek.move = true;
@@ -105,7 +103,5 @@ public class EnemyAI : MonoBehaviour
     public void AttackOver()
     {
         combat.attack = false;
-
-        Debug.Log("atack over");
     }
 }

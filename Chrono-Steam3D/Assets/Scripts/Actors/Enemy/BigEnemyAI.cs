@@ -24,7 +24,7 @@ public class BigEnemyAI : EnemyAI
     public override void Start()
     {
         base.Start();
-        _currentChargeCD = chargeCooldown;
+        _currentChargeCD = chargeCooldown*0.25f;
     }
     // Update is called once per frame
     public override void Update()
@@ -40,18 +40,20 @@ public class BigEnemyAI : EnemyAI
             combat.attack = false;
             obstacleavoidance.move = false;
         }
+
         if (collisionWithPlayer)
         {
             collisionWithPlayer = false;
-            enemy.Player.Stunned = true;
-            _currentStunDuration = stunDuration;
         }
-        if (enemy.Player.Stunned)
+
+        if (_currentStunDuration > 0)
         {
-            if (_currentStunDuration > 0)
-                _currentStunDuration -= Time.deltaTime;
-            else
-                enemy.Player.Stunned = false;
+            _currentStunDuration -= Time.deltaTime;
+            enemy.Player.Stunned = true;
+        }
+        else
+        {
+            enemy.Player.Stunned = false;
         }
         
         
@@ -61,20 +63,23 @@ public class BigEnemyAI : EnemyAI
         ActionNode Hit = new ActionNode(base.Attack);
         ActionNode Patrol = new ActionNode(Patroling);
         ActionNode seek = new ActionNode(Seeking);
+        ActionNode seekChargeCD = new ActionNode(SeekingyChargeCD);
         ActionNode Charge = new ActionNode(Charging);
         ActionNode dead = new ActionNode(base.die);
 
         QuestionNode inAttackRange = new QuestionNode(() => (playerDistance < combat.AttackRange) && !doingCharge, Hit, seek);
 
-        QuestionNode inChargeRange = new QuestionNode(() => (playerDistance > chargeRange) || (doingCharge), Charge, inAttackRange);
+        QuestionNode isChargeInCD = new QuestionNode(() => (_currentChargeCD > 0), seekChargeCD, Charge);
 
-        QuestionNode doIHaveTarget = new QuestionNode(() => (sight.targetInSight), inChargeRange, Patrol);
+        QuestionNode toClouseToCharge = new QuestionNode(() => (playerDistance > chargeRange) || (doingCharge), isChargeInCD, inAttackRange);
 
-        QuestionNode playerAlive = new QuestionNode(() => !(enemy.Player.Life_Controller.isDead), doIHaveTarget, Patrol);
+        QuestionNode PLayerInSigth = new QuestionNode(() => (sight.targetInSight), toClouseToCharge, Patrol);
 
-        QuestionNode doIHaveHealth = new QuestionNode(() => !(enemy.Life_Controller.isDead), playerAlive, dead);
+        QuestionNode playerAlive = new QuestionNode(() => !(enemy.Player.Life_Controller.isDead), PLayerInSigth, Patrol);
 
-        initialNode = doIHaveHealth;
+        QuestionNode AmIAlive = new QuestionNode(() => !(enemy.Life_Controller.isDead), playerAlive, dead);
+
+        initialNode = AmIAlive;
     }
     protected override void Attack()
     {
@@ -83,68 +88,71 @@ public class BigEnemyAI : EnemyAI
     }
     protected override void Patroling()
     {
-        Debug.Log("patrol");
         doingCharge = false;
         _seek.move = false;
         combat.attack = false;
         obstacleavoidance.move = true;
         enemy.Animations.MovingAnimation(true);
     }
-    protected override void Seeking()    
+    protected override void Seeking()
     {
         if (!combat.attack && !doingCharge)
         {
-            Debug.Log("seek");
+            doingCharge = false;
+            _seek.move = true;
+            combat.attack = false;
+            obstacleavoidance.move = false;
+            enemy.Animations.MovingAnimation(true);
+            _currentChargeCD = chargeCooldown;
+        }
+    }
+    protected virtual void SeekingyChargeCD()    
+    {
+        if (!combat.attack && !doingCharge)
+        {
             doingCharge = false;
             _seek.move = true;
             combat.attack = false;
             obstacleavoidance.move = false;
             enemy.Animations.MovingAnimation(true);
         }
+        _currentChargeCD -= Time.deltaTime;
+        if (enemy.Player != null)
+        {
+            previousPlayerPos = enemy.Player.transform.position;
+        }
     }
+
     void Charging()
     {
-        if (_currentChargeCD <= 0)
+        doingCharge = true;
+        _seek.move = false;
+        combat.attack = false;
+        obstacleavoidance.move = false;
+
+        //Consigo el vector entre el objetivo y mi posición
+        Vector3 deltaVector = (previousPlayerPos - transform.position).normalized;
+        deltaVector.y = 0;
+        //Me guardo la dirección unicamente.
+        direction = deltaVector;
+
+        //Roto mi objeto hacia la dirección obtenida
+        transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotSpeed);
+        //Muevo mi objeto
+        transform.position += transform.forward * chargeSpeed * Time.deltaTime;
+
+        if (Vector3.Distance(previousPlayerPos, transform.position) <= 0.5f || collisionWithPlayer)
         {
-            Debug.Log("Charge del bull");
-            doingCharge = true;
-            _seek.move = false;
-            combat.attack = false;
-            obstacleavoidance.move = false;
-
-            //Consigo el vector entre el objetivo y mi posición
-            Vector3 deltaVector = (previousPlayerPos - transform.position).normalized;
-            deltaVector.y = 0;
-            //Me guardo la dirección unicamente.
-            direction = deltaVector;
-
-            //Roto mi objeto hacia la dirección obtenida
-            transform.forward = Vector3.Lerp(transform.forward, direction, Time.deltaTime * rotSpeed);
-            //Muevo mi objeto
-            transform.position += transform.forward * chargeSpeed * Time.deltaTime;
-
-            if (Vector3.Distance(previousPlayerPos, transform.position) <= 1f || collisionWithPlayer)
-            {
-                _currentChargeCD = chargeCooldown;
-            }
+            _currentChargeCD = chargeCooldown;
+            doingCharge = false;
         }
-        else
-        {
-            _currentChargeCD -= Time.deltaTime;
-            if (enemy.Player != null)
-            {
-                previousPlayerPos = enemy.Player.transform.position;
-            }
-        }
-
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player" && doingCharge)
         {
-            Debug.Log("colishon player");
             collisionWithPlayer = true;
+            _currentStunDuration = stunDuration;
             doingCharge = false;
         }
     }
