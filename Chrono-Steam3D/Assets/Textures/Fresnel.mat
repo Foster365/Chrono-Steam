@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - _FresnelPower: 0.43
-    - _FresnelScale: 2.26
+    - _FresnelPower: 0.55
+    - _FresnelScale: 4.8
     - __dirty: 0
     m_Colors: []

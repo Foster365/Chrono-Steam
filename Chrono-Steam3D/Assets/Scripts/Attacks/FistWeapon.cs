@@ -8,7 +8,7 @@ public class FistWeapon : BladeWeapon
     {
         if (currentDurability > 0)
         {
-            currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DurabilityDecrease;
             if (specialOjcVfx != null)
             {
                 if (specialOjcVfx.CompareTag("FloorCrack"))

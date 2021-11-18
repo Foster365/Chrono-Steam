@@ -32,7 +32,7 @@ public class RangeWeapon : Weapon
        // Debug.Log("asdadasd");
             if (currentDurability > 0)
             {
-                currentDurability -= _weaponStats.DuravilitiDecres;
+                currentDurability -= _weaponStats.DurabilityDecrease;
                 foreach (var item in ParticleSystems)
                 {
                     item.Play();
@@ -79,7 +79,7 @@ public class RangeWeapon : Weapon
         #endregion
         if (currentDurability > 0)
         {
-            currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DurabilityDecrease;
             
             for (int i = 0; i < espParticleSystems.Count; i++)
             {

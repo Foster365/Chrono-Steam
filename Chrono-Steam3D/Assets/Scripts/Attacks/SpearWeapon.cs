@@ -9,7 +9,7 @@ public class SpearWeapon : BladeWeapon
         
         if (currentDurability > 0)
         {
-            currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DurabilityDecrease;
             for (int i = 0; i < espParticleSystems.Count; i++)
             {
                 #region debugcomprobation

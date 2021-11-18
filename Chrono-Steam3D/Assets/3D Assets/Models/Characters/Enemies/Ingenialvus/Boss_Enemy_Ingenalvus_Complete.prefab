@@ -4913,6 +4913,7 @@ MonoBehaviour:
   rotSpeed: 10
   chargeRange: 8
   chargeCooldown: 5
+  stunDuration: 0
 --- !u!114 &1536942281611378168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6054,6 +6055,26 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8063850961980517886, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
         type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063850961980517886, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 19.194958
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063850961980517886, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 106.8777
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063850961980517886, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 172.33444
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063850961980517886, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2
       objectReference: {fileID: 0}
@@ -6130,7 +6151,7 @@ PrefabInstance:
     - target: {fileID: 8063850961999099038, guid: 54e8dfa215f25ca4c9ad926eef7e0c67,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54e8dfa215f25ca4c9ad926eef7e0c67, type: 3}

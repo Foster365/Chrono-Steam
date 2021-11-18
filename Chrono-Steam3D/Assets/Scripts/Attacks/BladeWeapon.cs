@@ -23,7 +23,7 @@ public class BladeWeapon : Weapon , IAreaAttack
     public override void Execute()
     {
         AreaAtack();
-        currentDurability -= _weaponStats.DuravilitiDecres;
+        currentDurability -= _weaponStats.DurabilityDecrease;
         _currentCD = _weaponStats.CoolDown;
         //Debug.Log($"Hice {_weaponStats.AttDamage} de daño con {name} a rango melee de distancia");
     }
@@ -32,7 +32,7 @@ public class BladeWeapon : Weapon , IAreaAttack
         //Debug.Log("Entered in Heavy Weapon SE");
         if (currentDurability > 0)
         {
-            currentDurability -= WeaponStats.DuravilitiDecres;
+            currentDurability -= WeaponStats.DurabilityDecrease;
             for (int i = 0; i < espParticleSystems.Count; i++)
             {
                 #region debugcomprobation
