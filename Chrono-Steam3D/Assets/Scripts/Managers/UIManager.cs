@@ -8,6 +8,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] Dictionary<string, Image> UIElements;
     [SerializeField] HealthUI healthUI;
     [SerializeField] WeaponsUI durabilityUI;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(healthUI);
+        DontDestroyOnLoad(durabilityUI);
+    }
     // Start is called before the first frame update
     void Start()
     {

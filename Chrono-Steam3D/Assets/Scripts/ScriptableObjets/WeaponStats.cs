@@ -13,7 +13,7 @@ public class WeaponStats : ScriptableObject
     [SerializeField] private float coolDown = 0;
     [SerializeField] private float _EspExeCd = 3;
     [SerializeField] private int _espDamage = 0;
-    [SerializeField] GameObject weaponIconImage;
+    [SerializeField] Image weaponIconImage;
 
     //[SerializeField] private IAttack attStrategy;
     public int AttDamage { get => attDamage;}
