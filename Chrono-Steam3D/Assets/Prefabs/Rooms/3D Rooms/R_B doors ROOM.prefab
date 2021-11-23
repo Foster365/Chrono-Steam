@@ -64,12 +64,10 @@ Transform:
   - {fileID: 5761866460058177505}
   - {fileID: 1759621574963614281}
   - {fileID: 7470160484688613857}
-  - {fileID: 3924252392908241491}
-  - {fileID: 8545088316994692735}
   - {fileID: 4855915825973331055}
   - {fileID: 6784309268540905267}
   m_Father: {fileID: 2142173571868914850}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1238194154115155972
 GameObject:
@@ -219,8 +217,8 @@ Transform:
   - {fileID: 5560106606149177360}
   - {fileID: 1761964145378861374}
   - {fileID: 1413019256227923756}
-  m_Father: {fileID: 2992146065906498407}
-  m_RootOrder: 3
+  m_Father: {fileID: 2142173571868914850}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7475386099595522157
 GameObject:
@@ -250,6 +248,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8545088316994692735}
+  - {fileID: 3924252392908241491}
   - {fileID: 2992146065906498407}
   - {fileID: 1865959281079792929}
   - {fileID: 5749068892249064063}
@@ -360,8 +360,8 @@ Transform:
   m_Children:
   - {fileID: 8545088316832094165}
   - {fileID: 8545088316162755855}
-  m_Father: {fileID: 2992146065906498407}
-  m_RootOrder: 4
+  m_Father: {fileID: 2142173571868914850}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 0}
 --- !u!1001 &181532883766217084
 PrefabInstance:
@@ -654,6 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_With_Armor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
@@ -2230,6 +2235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_With_Armor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
       propertyPath: waypointsContainer
@@ -2631,7 +2641,7 @@ PrefabInstance:
     - target: {fileID: 7212343205623485101, guid: 5cbadf2f5d9eb614eae73d199d76ed93,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7212343205623485101, guid: 5cbadf2f5d9eb614eae73d199d76ed93,
         type: 3}
@@ -3208,6 +3218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_With_Armor
       objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
       propertyPath: waypointsContainer
@@ -3311,7 +3326,7 @@ PrefabInstance:
     - target: {fileID: 4072447156936465900, guid: a4251106d4019b1468f372e54eb09af4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4072447156936465900, guid: a4251106d4019b1468f372e54eb09af4,
         type: 3}
@@ -3591,6 +3606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_With_Armor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
       propertyPath: waypointsContainer
@@ -3844,7 +3864,7 @@ PrefabInstance:
     - target: {fileID: 8716772193980303463, guid: 6e9af432f10f04947ac4d68d209b30e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8716772193980303463, guid: 6e9af432f10f04947ac4d68d209b30e2,
         type: 3}
@@ -4804,6 +4824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_With_Armor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
       propertyPath: waypointsContainer
@@ -4827,7 +4852,7 @@ PrefabInstance:
     - target: {fileID: 476200417772350531, guid: db381ccbcee43cc47b5d6319e4794331,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 476200417772350531, guid: db381ccbcee43cc47b5d6319e4794331,
         type: 3}
@@ -4887,19 +4912,19 @@ PrefabInstance:
     - target: {fileID: 995327873206646521, guid: db381ccbcee43cc47b5d6319e4794331,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db381ccbcee43cc47b5d6319e4794331, type: 3}
---- !u!1 &6155688386468580745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 995327873206646521, guid: db381ccbcee43cc47b5d6319e4794331,
-    type: 3}
-  m_PrefabInstance: {fileID: 6394399625049275248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6784309268540905267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476200417772350531, guid: db381ccbcee43cc47b5d6319e4794331,
+    type: 3}
+  m_PrefabInstance: {fileID: 6394399625049275248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6155688386468580745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 995327873206646521, guid: db381ccbcee43cc47b5d6319e4794331,
     type: 3}
   m_PrefabInstance: {fileID: 6394399625049275248}
   m_PrefabAsset: {fileID: 0}
@@ -4918,7 +4943,7 @@ PrefabInstance:
     - target: {fileID: 8716772193980303463, guid: 6e9af432f10f04947ac4d68d209b30e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8716772193980303463, guid: 6e9af432f10f04947ac4d68d209b30e2,
         type: 3}
@@ -5258,6 +5283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_With_Armor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}

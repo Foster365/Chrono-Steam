@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private GameObject _playerInstance;
     private GameObject _camera;
     private GameObject lvlManager;
+    private Loot_Manager _lootManager;
     private int _lvlToCharge;
     private int _clearRooms;
     [SerializeField]
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public bool Win { get => _win; set => _win = value; }
     public int LvlToCharge { get => _lvlToCharge; set => _lvlToCharge = value; }
     public int ClearRooms { get => _clearRooms; set => _clearRooms = value; }
+    public Loot_Manager LootManager { get => _lootManager; set => _lootManager = value; }
 
     private void Awake()
     {

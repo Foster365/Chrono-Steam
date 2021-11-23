@@ -16,9 +16,7 @@ public class Enemy : Actor
     float timer;
     private bool _itemDroped;
     private Roulette roulette;
-    private Dictionary<GameObject, int> dropNodes = new Dictionary<GameObject, int>();
-    [SerializeField] List<GameObject> drops;
-    [SerializeField] List<int> rates;
+    
 
     [SerializeField]
     protected List<ParticleSystem> particleSystems = new List<ParticleSystem>();
@@ -46,10 +44,6 @@ public class Enemy : Actor
         AI = GetComponent<EnemyAI>();
         _life_Controller.Dead.AddListener(Die);
         _life_Controller.Damaged.AddListener(OnDamaged);
-        for (int i = 0; i < drops.Count; i++)
-        {
-            dropNodes.Add(drops[i], rates[i]);
-        }
         _player = GameManager.Instance.PlayerInstance.GetComponent<Player_Controller>();
     }
 
@@ -162,7 +156,8 @@ public class Enemy : Actor
     }
     void ExecuteRoulette()
     {
-        GameObject item = roulette.Run(dropNodes);
+        Debug.Log("CurrentDrops.count  " + GameManager.Instance.LootManager.CurrentDrops.Count);
+        GameObject item = roulette.Run(GameManager.Instance.LootManager.CurrentDrops);
         if (item!=null)
         {
             Instantiate(item, new Vector3(transform.position.x, 1, transform.position.z), Quaternion.identity);

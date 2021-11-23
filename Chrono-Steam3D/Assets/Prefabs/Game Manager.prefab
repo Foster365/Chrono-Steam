@@ -585,6 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950709300573031325}
   - component: {fileID: 4950709300573031324}
+  - component: {fileID: 5365463163379155266}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -622,6 +623,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnCD: 3
+--- !u!114 &5365463163379155266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950709300573031327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c127ef9ba138a74c8d847ce099e7b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - {fileID: 6733235909414770241, guid: 7c64477b334b8d846aa736c6c9a2ea47, type: 3}
+  - {fileID: 6719064054825579944, guid: b42be8dd7c3197543aa5d3e491932051, type: 3}
+  - {fileID: 4703395712638731969, guid: c7a3c3cbb963dfb49bcaeec5924e3007, type: 3}
+  - {fileID: 1274945351797494628, guid: 3ee101878fc953c499c5ffeb3eb980f0, type: 3}
+  - {fileID: 8075348974787518780, guid: 98004afda8ef42a41afb1dfd3a71b82e, type: 3}
+  rates: 0100000001000000010000000100000001000000
 --- !u!1 &5058319395356442845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1798,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9702b1ef8d691304e82445a048ed1c04, type: 3}
+--- !u!224 &513811370749570040 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1280705631574851484, guid: 9702b1ef8d691304e82445a048ed1c04,
+    type: 3}
+  m_PrefabInstance: {fileID: 1649608585225294948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &513811370138564024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1280705632154132956, guid: 9702b1ef8d691304e82445a048ed1c04,
@@ -1790,9 +1816,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &513811370749570040 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1280705631574851484, guid: 9702b1ef8d691304e82445a048ed1c04,
-    type: 3}
-  m_PrefabInstance: {fileID: 1649608585225294948}
-  m_PrefabAsset: {fileID: 0}

@@ -350,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &570580309973626360
 Transform:
   m_ObjectHideFlags: 0
@@ -1709,6 +1709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_With_Armor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}
@@ -6015,6 +6020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_With_Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761611409688061314, guid: 8d9301d3a735aed48b08c8b572790f4a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7108117689740800123, guid: 8d9301d3a735aed48b08c8b572790f4a,
         type: 3}

@@ -71,11 +71,13 @@ public class LevelManager : MonoBehaviour
         if (GameManager.Instance.ClearRooms >= RoomsToClear)
         {
             GameManager.Instance.ClearRooms = 0;
+            GameManager.Instance.LootManager.AddWeaponToLoot();
             GameManager.Instance.EventQueue.Add(_winlvl);
         }
         else
         {
             GameManager.Instance.ClearRooms++;
+            GameManager.Instance.LootManager.AddWeaponToLoot();
             GameManager.Instance.reloadScene();
         }
     }
