@@ -82,9 +82,9 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     m_Colors:
-    - _BaseTextureColorModifier: {r: 0.0990566, g: 0.3962264, b: 0.22613616, a: 0}
+    - _BaseTextureColorModifier: {r: 0.076538086, g: 0, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 0.9906862, g: 4.035701, b: 0.20939958, a: 0}

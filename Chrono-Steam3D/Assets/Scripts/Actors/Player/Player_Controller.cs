@@ -248,7 +248,7 @@ public class Player_Controller : MonoBehaviour,ILive
             if(_playerStats.Weapon == null)
             {
                 SetWeapon(other.gameObject.transform.GetChild(0).gameObject);
-                EnableWeaponIcon(_playerStats.Weapon.tag);
+                //EnableWeaponIcon(_playerStats.Weapon.tag); //TODO Setear weapon icon UI
                 //_playerStats.Weapon.GetComponent<Weapon>().IsDrop = true;
                 FindObjectOfType<AudioManager>().Play("PickUpWeapon");
                 Destroy(other.gameObject);

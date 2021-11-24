@@ -11,7 +11,7 @@ public class Small_Enemy_Health_UI : MonoBehaviour
 
     [SerializeField] Enemy enemy;
 
-    [SerializeField] TMP_Text enemyHealth;
+    [SerializeField] Image enemyHealth;
 
     float enemyMaxHealth;
     float enemyCurrentHealth;
@@ -27,7 +27,7 @@ public class Small_Enemy_Health_UI : MonoBehaviour
 
     void UpdateHealth()
     {
-        enemyHealth.text = enemyCurrentHealth.ToString();
+        enemyHealth.fillAmount = enemyCurrentHealth/enemyMaxHealth;
     }
 
 }

@@ -11,8 +11,8 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(healthUI);
-        DontDestroyOnLoad(durabilityUI);
+        //DontDestroyOnLoad(healthUI);
+        //DontDestroyOnLoad(durabilityUI);
     }
     // Start is called before the first frame update
     void Start()
