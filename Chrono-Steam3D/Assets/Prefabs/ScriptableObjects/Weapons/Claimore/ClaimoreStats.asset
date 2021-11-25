@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attDamage: 16
   durability: 100
-  duravilitiDecres: 8
+  durabilityDecrease: 17
   coolDown: 1
   _EspExeCd: 3.5
   _espDamage: 20
+  weaponIconImage: {fileID: 0}
