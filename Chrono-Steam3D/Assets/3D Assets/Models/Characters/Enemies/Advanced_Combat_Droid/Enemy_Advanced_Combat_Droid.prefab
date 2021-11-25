@@ -422,7 +422,7 @@ RectTransform:
   m_GameObject: {fileID: 6546580192846958272}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_Children: []
   m_Father: {fileID: 1569434006048185486}
   m_RootOrder: 1
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.17367825, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.3647059, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -552,8 +552,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 618783024299296546, guid: 0fb227e4f4aa80a4094fed5088115320,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b844fcdcbecff845be08958f1940494,
+        type: 3}
+    - target: {fileID: 618783024299296546, guid: 0fb227e4f4aa80a4094fed5088115320,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618783024299296546, guid: 0fb227e4f4aa80a4094fed5088115320,
+        type: 3}
       propertyPath: m_Color.g
-      value: 0.17367825
+      value: 0.36179516
+      objectReference: {fileID: 0}
+    - target: {fileID: 618783024299296546, guid: 0fb227e4f4aa80a4094fed5088115320,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 618783024299296546, guid: 0fb227e4f4aa80a4094fed5088115320,
         type: 3}
